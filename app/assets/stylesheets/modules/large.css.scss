@@ -1,0 +1,16 @@
+.wrapper {
+  width: 1080px;
+  /* 1140px - 10% for margins */
+  margin: 0 auto;
+}
+
+.main {
+  article {
+    float: left;
+    width: 57%;
+  }
+  aside {
+    float: right;
+    width: 28%;
+  }
+}

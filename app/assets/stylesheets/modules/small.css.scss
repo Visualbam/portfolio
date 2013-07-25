@@ -1,0 +1,140 @@
+/* Web Fonts @import */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+/* Colours */
+
+/* Basic typography */
+$heading-font-family: 'Open Sans', sans-serif;
+$body-font-family: 'Droid Serif', serif;
+$header-color: (62, 150, 219); /* font color in <header> */
+
+/* Header */
+@mixin header-h1 {
+  //text-indent: -9999px; /*Uncomment this line if you're replacing the text with a logo. */
+  font: bold 3em/1 $heading-font-family;
+  color: $header-color;
+  letter-spacing: -2px;
+  padding-right: .75em;
+}
+
+@mixin header-h4 {
+  font: italic 1.5em/1.25 $body-font-family;
+  margin-bottom: 1em;
+  margin-top: -1em;
+}
+
+@mixin typography-sample-h4 {
+  font: italic 1.5em/1.25 $body-font-family;
+  margin-bottom: .25em;
+  color: $heading-color;
+}
+
+
+
+
+header {
+  position:relative;
+  // background: #2e3639;
+  background:white;
+  height:5rem;
+}
+
+footer {
+  margin-top: 2em;
+  padding:20px 0;
+  color: white;
+  background:rgb(46,54,57);
+}
+
+nav {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 100%;
+  margin-top: -1.025rem!important;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    li {
+      float: left;
+    }
+  }
+
+  a {
+    padding:5px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #3e96db;
+    border-radius: 25px;
+    &:hover, &:visited {
+      color: #3e96db;
+    }
+    &:hover {
+      text-decoration: underline;
+      background:#4f5c7d;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+  }
+}
+
+article {
+  h1 {
+    @include header-h1;
+  }
+  h4 {
+    @include header-h4;
+  }
+}
+
+.register-container {
+  background: #181c1d;
+  div ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    li {
+      float: left;
+      padding: 2px 0;
+      margin-bottom: 0;
+      a {
+        margin: 0 20px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        font: 0.75rem Helvetica, Helvetica Neue, Arial;
+      }
+    }
+  }
+}
+
+li[rel="register"] {
+  background: #fd9458;
+}
+
+img[rel="logo"] {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width:10rem;
+  margin-top: -4.15rem!important;
+}
+
+
+
+
