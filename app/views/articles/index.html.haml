@@ -1,7 +1,6 @@
-.articles
-  %article
-    %h1 Listing articles
-    %h4 Sub title
-    = render @articles
-    %br/
-    = link_to 'New Article', new_article_path
+%section.article-excerpt
+  / %h1 Bruce McElroy's Design Blog
+  / %h4 rails is where it's at
+  / = link_to 'New Article', new_article_path
+  / %hr
+  = render @articles

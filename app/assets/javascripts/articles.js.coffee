@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).ready ->
+  $("body").addClass "js"
+  $menu = $("#menu")
+  $menulink = $(".menu-link")
+  $menulink.click ->
+    $menulink.toggleClass "active"
+    $menu.toggleClass "active"
+    false
+
