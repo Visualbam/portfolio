@@ -1,8 +1,7 @@
 %header 
   %a.menu-link{:href => "#menu"} Menu
-  
   %nav#menu.wrapper{:role => "navigation"}
-    = image_tag("logo.svg", :alt => "visualbam", :rel => "logo")
+    = link_to(image_tag("logo.svg", :alt => "visualbam", :rel => "logo"), root_path)
     %ul
       %li
         %a{:href => "#"} Resume

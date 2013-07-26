@@ -11,11 +11,11 @@ body, html {
 }
 
 /* Basic typography */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a {
   font-family: Roboto,arial,sans-serif;
   color: $darkblue;
 }
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6, a {
   font-family: Roboto,arial,sans-serif;
   font-weight: normal;
   color: $darkblue;
@@ -48,12 +48,18 @@ header {
 
   h2 {
     margin:0;
+    a {
+      font-weight: bold;
+      &:hover {
+        color:$lightblue;
+      }
+    }
   }
 
   p {
     color:#666;
     letter-spacing: 0.5px;
-    line-height: 1.5em;
+    line-height: 1.5em; font-weight:100;
   }
 
   article {
@@ -107,29 +113,31 @@ nav {
       float: left;
       height: 100%;
     }
+
+    a {
+      height: 100%;
+      padding:2.25rem 35px 8px 35px;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+      font-size:0.85em;
+      color: $lightblue;
+      font-family:Roboto,arial,sans-serif;
+      &:hover, &:visited {
+        color: $lightblue;
+      }
+      &:hover {
+        text-decoration: underline;
+        background:$lightblue;
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 
-  a {
-    height: 100%;
-    padding:2.25rem 35px 8px 35px;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: normal;
-    font-size:0.85em;
-    color: $blue;
-    font-family:Roboto,arial,sans-serif;
-    &:hover, &:visited {
-      color: $blue;
-    }
-    &:hover {
-      text-decoration: underline;
-      background:$darkblue;
-      color: white;
-      text-decoration: none;
-    }
-  }
+  
 }
 
 img[rel="logo"] {
