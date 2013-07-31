@@ -11,6 +11,7 @@ $ ->
 
 # colorBar for beneath header
 $ ->
+
   $bars = $(".colorBar")
   colors = ["#185479", "#0078a3", "#a7d6ee", "#f8f9f4"]
   
@@ -25,6 +26,7 @@ $ ->
     height: "1em"
     overflow: "hidden"
     background: colors[colors.length - 1]
+    opacity: 0
 
   c = 0
 
@@ -36,3 +38,5 @@ $ ->
       background: colors[c]
     ).appendTo $bars
     c++
+
+
