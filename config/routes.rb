@@ -1,6 +1,6 @@
 Portfolio::Application.routes.draw do
   
-  root :to => 'static_pages#home'
+  root :to => "static_pages#home"
   # Static pages
   get "/home" => 'static_pages#home'
   get "/resume" => 'static_pages#resume'

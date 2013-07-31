@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
   respond_to :html, :js
   
+  def home
+  end
+  
   def resume
   end
 
@@ -12,7 +15,7 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
-  
+
 end
   
 
