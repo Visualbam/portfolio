@@ -1,38 +1,132 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Global Styles */
+body, html {
+  background:$grey;
+}
+
+/* Basic typography */
+h1, h2, h3, h4, h5, h6, a {
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  letter-spacing: 0.05em;
+  color: #3b4249;
+}
+h2, h3, h4, h5, h6 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  color: #3b4249;
+}
+
+/* Header */
+h1 {
+  //text-indent: -9999px; /*Uncomment this line if you're replacing the text with a logo. */
+  padding-right: .75em;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font: italic 1.2em/1.25 'Droid Serif', serif;
+  margin-bottom: 1em;
+  margin-top: -1.25em;
+  color: $blue;
+}
 
 
-/* Web Fonts @import */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800);
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+nav {  
+  width: 100%;  
+  background: #455868;  
+  font-size: 11pt;  
+  font-weight: bold;  
+  position: relative;
+  ul {  
+    padding: 0;  
+    margin: 0 auto;  
+    height: 5em;  
+  }
+  li {  
+    display: inline;  
+    float: left;  
+    a {  
+      border-right: 1px solid #576979;  
+      box-sizing:border-box;  
+      -moz-box-sizing:border-box;  
+      -webkit-box-sizing:border-box;
+      &:last-child a {border-right:0;}  
+    }  
+  }  
+  a {  
+    color: #fff;  
+    display: inline-block;  
+    width: 100px;  
+    text-align: center;  
+    text-decoration: none;  
+    line-height: 40px;  
+    text-shadow: 1px 1px 0px #283744;
+    a:hover, nav a:active {  
+      background-color: #8c99a4;  
+    }
+    #pull {  
+      display: none;  
+    }    
+  }
+}  
 
+.colorBar {
+  margin-top: -1.25em;
+  margin-bottom: 2em;
+}
+
+.article-excerpt {
+
+  h2 {
+    margin:0;
+    a {
+      font-weight: light;
+      &:hover {
+        color:$lightblue;
+      }
+    }
+  }
+
+  p {
+    color:#777!important;
+    letter-spacing: 0.5px;
+    line-height: 1.5em; font-weight:100;
+  }
+
+  article {
+    @include column(8);
+    background:white;
+    border-bottom: 1px solid #efefef;
+    padding:1.5em;
+    margin:0!important;
+  }
+
+  aside {
+    @include column(4);
+  }
+
+  .image {
+    @include column(5); 
+    background:$grey;
+    height: 200px;
+    float: left;
+    display: inline-block;
+    margin:0;
+  }
+
+  .content {
+    @include column(7); 
+    float: right;
+  }
+}
 
 footer {
   margin-top: 2em;
   padding:20px 0;
   color: white;
-  background:rgb(46,54,57);
+  // background:rgb(46,54,57);
 }
 
 
-img[rel="logo"] {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  height: 100%;
-  width:10rem;
-  margin-top: -5.15rem!important;
-}
-
-
-/* Page Styles */
-.articles {
-  section {
-    background:white;
-  }
-}
 
 
 

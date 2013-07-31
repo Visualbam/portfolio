@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
 /* Global Styles */
 body, html {
   background:$grey;
@@ -12,13 +9,14 @@ body, html {
 
 /* Basic typography */
 h1, h2, h3, h4, h5, h6, a {
-  font-family: Roboto,arial,sans-serif;
-  color: $darkblue;
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  letter-spacing: 0.05em;
+  color: #3b4249;
 }
-h2, h3, h4, h5, h6, a {
-  font-family: Roboto,arial,sans-serif;
+h2, h3, h4, h5, h6 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
-  color: $darkblue;
+  color: #3b4249;
 }
 
 /* Header */
@@ -38,18 +36,66 @@ h4 {
 
 header {
   position:relative;
-  // background: #2e3639;
-  background:white;
-  height:6rem;
-  // box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
-  margin-bottom: 2em;
+  z-index: 5;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+  margin-bottom: 4em;
 }
+
+nav {  
+  height: 5em;  
+  width: 100%;  
+  background: white;  
+  font-size: 0.85em;  
+  position: relative;  
+  border-bottom: 2px solid #efefef; 
+  z-index: 15;
+  a {
+    color: $lightblue;  
+    display: inline-block;  
+    width: 10em;  
+    text-align: center;  
+    text-decoration: none;  
+    line-height: 5em; 
+    letter-spacing: 0.1em;
+    &:hover, &:active {
+      background-color: $lightblue;
+      color:white;
+    }
+  }
+  ul {  
+    padding: 0; 
+    margin: 0;
+    float: right; 
+    height: 5em;
+    li {
+      display: inline;  
+      float: left;
+      a {
+        border-left: 1px solid lighten($lightblue, 10%);  
+        box-sizing:border-box;  
+        -moz-box-sizing:border-box;  
+        -webkit-box-sizing:border-box;
+      }
+      &:last-child a {border-right: 0;}
+    }  
+  }
+  #pull {display:none;} 
+}
+
+.colorBar {
+  position:relative;
+  left: -10px;
+  width: 110%!important;
+  margin-top: 0;
+  z-index: 1;
+}
+
 .article-excerpt {
 
   h2 {
     margin:0;
     a {
-      font-weight: bold;
+      font-weight: light;
       &:hover {
         color:$lightblue;
       }
@@ -57,7 +103,7 @@ header {
   }
 
   p {
-    color:#666;
+    color:#777!important;
     letter-spacing: 0.5px;
     line-height: 1.5em; font-weight:100;
   }
@@ -77,15 +123,27 @@ header {
   .image {
     @include column(5); 
     background:$grey;
-    height: 200px;
     float: left;
     display: inline-block;
     margin:0;
+    overflow: hidden;
+    height: 200px;
+    img {
+      width:200%;
+      -webkit-transition: all .2s ease-in-out;
+      &:hover { -webkit-transform: scale(1.1); }
+    }
   }
 
   .content {
     @include column(7); 
     float: right;
+    padding:0.75em 0 0 0;
+    .admin {display:none;}
+    p {
+      max-height: 6em;
+      overflow: hidden;
+    }
   }
 }
 
@@ -93,61 +151,17 @@ footer {
   margin-top: 2em;
   padding:20px 0;
   color: white;
-  background:rgb(46,54,57);
-}
-
-nav {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  height: 100%;
-  margin-top: -3.025rem !important;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    float: right;
-    height: 100%;
-    li {
-      float: left;
-      height: 100%;
-    }
-
-    a {
-      height: 100%;
-      padding:2.25rem 35px 8px 35px;
-      display: block;
-      text-align: center;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: normal;
-      font-size:0.85em;
-      color: $lightblue;
-      font-family:Roboto,arial,sans-serif;
-      &:hover, &:visited {
-        color: $lightblue;
-      }
-      &:hover {
-        text-decoration: underline;
-        background:$lightblue;
-        color: white;
-        text-decoration: none;
-      }
-    }
-  }
-
-  
+  // background:rgb(46,54,57);
 }
 
 img[rel="logo"] {
   position: absolute;
   top: 50%;
   right: 0;
-  left: 0;
+  left: 1em;
   height: 100%;
-  width:12rem;
-  margin-top: -3.25rem!important;
+  width:14rem;
+  margin-top: -2.3rem!important;
 }
 
 
