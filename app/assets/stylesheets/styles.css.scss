@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800);
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100);
+@import "compass/css3";
 
 html, button, input, select, textarea {
   color: #222;
@@ -10,6 +11,8 @@ html, button, input, select, textarea {
 body, html, p, a {
   font: 1rem / 1.4 normal 13px Roboto,arial,sans-serif;
 }
+
+
 
 a {
   text-decoration: none;
@@ -34,6 +37,12 @@ $orange:rgb(229, 144, 26);
 
 a:hover {
   transition: all 0.5s ease-in-out;
+}
+
+.email {
+  background:$blue;
+  padding:2em;
+  width: auto;
 }
 
 .chromeframe {
@@ -232,14 +241,6 @@ textarea {
       opacity: 1!important;
     }  
 } 
-
-
-
-
-
-
-
-
 
 
 
