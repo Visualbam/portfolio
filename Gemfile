@@ -5,6 +5,7 @@ gem 'rails', '4.0.0.beta1'
 
 group :production do
   gem 'pg'
+  gem 'haml'
 end        
 
 group :development, :test do
