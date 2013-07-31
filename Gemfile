@@ -2,10 +2,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
+ruby '2.0.0'
 
 group :production do
   gem 'pg'
   gem 'haml'
+  gem 'rails_12factor'
 end        
 
 group :development, :test do
