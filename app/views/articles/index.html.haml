@@ -1,6 +1,6 @@
 %section.article-excerpt
-  / = link_to 'New Article', new_article_path
-  / %hr
+  = link_to 'New Article', new_article_path
+  %hr
   - @articles.each do |article|
     %article
       .content
