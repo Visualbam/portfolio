@@ -107,6 +107,14 @@ nav {
 }
 
 
+  article {
+    @include column(12);
+    background:white;
+    border-bottom: 1px solid #efefef;
+    padding:1.5em;
+    margin:0!important;
+  }
+
 
 .article-excerpt {
 

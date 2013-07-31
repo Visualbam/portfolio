@@ -1,6 +1,6 @@
-.content
-  %p= comment.name
-  %p= comment.email
-  %p= comment.body
-  = link_to 'Edit', edit_article_comment_path(@article, comment)
-  = link_to 'Delete', article_comment_path(@article, comment), :confirm => 'Are you sure?', :method => :delete
+/ .content
+/   %p= comment.name
+/   %p= comment.email
+/   %p= comment.body
+/   = link_to 'Edit', edit_article_comment_path(@article, comment)
+/   = link_to 'Delete', article_comment_path(@article, comment), :confirm => 'Are you sure?', :method => :delete
