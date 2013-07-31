@@ -3,7 +3,7 @@
   %head
     %title Portfolio
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    
     = csrf_meta_tags
   %body
     = render 'layouts/includes/nav'
@@ -11,4 +11,4 @@
       .main.wrapper.clearfix
         = yield
     = render 'layouts/includes/footer'
-    = javascript_include_tag "articles"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
