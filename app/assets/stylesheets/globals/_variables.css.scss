@@ -22,6 +22,25 @@ $beige:rgb(246, 245, 240);
 $grey:#e5e5e5;
 $orange:rgb(229, 144, 26);
 
+$red: rgb(235, 80, 66);
+$yellow: rgb(255, 255, 95);
+$green: rgb(180, 255, 92);
+$fb-blue: #3B5998;
+$twitter-blue: #4099FF;
+
+// Icon Object
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+$icons: 
+  ('save' '\1F4BE'),
+  ('delete' '\12as'),
+  ('fb' '\F30E'),
+  ('twitter' '\F309'),
+  ('bolt' '\26A1'),
+  ('danger' '\26A0'),
+  ('tick' '\2713'),
+  ('email' '\2709');
+;
+
 // Font Settings
 $fontSmoothing: antialiased;
 $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;

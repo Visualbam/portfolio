@@ -6,9 +6,6 @@
 html { font-size: 100%; }
 body { margin: 0; padding: 0; background: $white; line-height: 1; color: $bodyFontColor; position: relative;  }
 
-@media only screen and (min-width: 48em) {
-  body { font-size: ms(0); }
-}
 
 ::-moz-selection, ::selection {
   background: #b3d4fc;
@@ -41,10 +38,10 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
   direction: $textDirection;
 }
 
-p { font-family: inherit; font-weight: $bodyFontWeight; font-size: 1em; line-height: 1.6; margin-bottom: 1.25em;
-  &.lead { font-size: 1em * 1.25; line-height: 1.6; margin-bottom: 1.25em; }
+p { font-family: inherit; font-weight: $bodyFontWeight; font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem;
+  &.lead { font-size: 1rem * 1.25; line-height: 1.6; margin-bottom: 1.25rem; }
 }
-aside p { font-size: 1em - 1; line-height: 1.35; font-style: italic; }
+aside p { font-size: 1rem - 1; line-height: 1.35; font-style: italic; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headerFontFamily;
@@ -53,21 +50,21 @@ h1, h2, h3, h4, h5, h6 {
   color: $headerFontColor;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   small { font-size: 60%; color: lighten($headerFontColor, 30%); line-height: 0; }
 }
 
-h1 { font-size: 2.25em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
+h1 { font-size: 2.25rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.7rem; }
+h4 { font-size: 1.5rem }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
 
 hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px; height: 0; }
 
-.subheader { line-height: 1.3; color: lighten($headerFontColor, 30%); font-weight: 300; margin-bottom: 1.25em; }
+.subheader { line-height: 1.3; color: lighten($headerFontColor, 30%); font-weight: 300; margin-bottom: 1.25rem; }
 
 em, i { font-style: italic; line-height: inherit; }
 strong, b { font-weight: bold; line-height: inherit; }
@@ -75,12 +72,12 @@ small { font-size: 60%; line-height: inherit; }
 code { font-weight: bold; background: $highlightColor; }
 
 /* Lists ---------------------- */
-ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; list-style-position: inside; }
+ul, ol, dl { font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem; list-style-position: inside; }
 ul {
   li {
     ul, ol { margin-#{$defaultFloat}: 20px; margin-bottom: 0; }
   }
-  &.square, &.circle, &.disc { margin-#{$defaultFloat}: 1.25em; }
+  &.square, &.circle, &.disc { margin-#{$defaultFloat}: 1.25rem; }
   &.square { list-style-type: square;
     li ul { list-style: inherit; }
   }
@@ -156,9 +153,18 @@ ol { margin-#{$defaultFloat}: 20px;
 }
 
 
+/* Buttons ---------------------- */
+.danger  { @include button($red, 'danger'); a {color:white;}}
+.signup  { @include button($blue, 'tick', left); a {color:white;}}
+.save    { @include button($green,'save', left); a {color:white;}}
+.fb      { @include button($fb-blue, 'fb', left); a {color:white;}}
+.twitter { @include button($twitter-blue, 'twitter', left); a {color:white;}}
+.power { @include button($yellow, 'bolt', right); a {color:white;}}
+
+
 /* Blockquotes ---------------------- */
 blockquote, blockquote p { line-height: 1.5; color: lighten($headerFontColor, 30%); }
-blockquote { margin: 0 0 1.25em; padding: 9px 20px 0 19px; border-#{$defaultFloat}: 1px solid #ddd;
+blockquote { margin: 0 0 1.25rem; padding: 9px 20px 0 19px; border-#{$defaultFloat}: 1px solid #ddd;
   cite { display: block; font-size: 1em - 1; color: lighten($headerFontColor, 20%);
     &:before { content: "\2014 \0020"; }
     a, a:visited { color: lighten($headerFontColor, 20%); }
@@ -195,13 +201,13 @@ abbr { text-transform: none; }
 
 /* Alerts ---------------------- */
 
-div.alert-box { display: block; padding: 6px 7px 7px; font-weight: bold; font-size: ms(0); color: $white; background-color: $mainColor; border: 1px solid rgba(#000,.1); margin-bottom: 12px; @include border-radius(3px); text-shadow: 0 -1px rgba(#000,.3); position: relative;
+div.alert-box { display: block; padding: 6px 7px 7px; font-weight: bold; font-size: 1rem; color: $white; background-color: $mainColor; border: 1px solid rgba(#000,.1); margin-bottom: 12px; @include border-radius(3px); text-shadow: 0 -1px rgba(#000,.3); position: relative;
 
   &.success { background-color: $successColor; color: #fff; text-shadow: 0 -1px rgba(#000,.3); }
   &.alert { background-color: $alertColor; color: #fff; text-shadow: 0 -1px rgba(#000,.3); }
   &.secondary { background-color: $secondaryColor; color: darken($secondaryColor, 60%); text-shadow: 0 1px rgba(#fff,.3); }
 
-  a.close { color: #333; position: absolute; #{$defaultOpposite}: 4px; top: -1px; font-size: ms(1); opacity: 0.2; padding: 4px; }
+  a.close { color: #333; position: absolute; #{$defaultOpposite}: 4px; top: -1px; font-size: 1.25rem; opacity: 0.2; padding: 4px; }
   a.close:hover, a.close:focus { opacity: 0.4; }
 
 }
@@ -272,9 +278,9 @@ table thead tr th,
 table tfoot tr th,
 table tbody tr td,
 table tr td,
-table tfoot tr td { display: table-cell; font-size: ms(0); line-height: 18px; text-align: #{$defaultFloat}; }
+table tfoot tr td { display: table-cell; font-size: 1rem; line-height: 18px; text-align: #{$defaultFloat}; }
 table thead tr th,
-table tfoot tr td { padding: 8px 10px 9px; font-size: ms(0); font-weight: bold; color: #222; }
+table tfoot tr td { padding: 8px 10px 9px; font-size: 1rem; font-weight: bold; color: #222; }
 table thead tr th:first-child, table tfoot tr td:first-child { border-#{$defaultFloat}: none; }
 table thead tr th:last-child, table tfoot tr td:last-child { border-#{$defaultOpposite}: none; }
 
