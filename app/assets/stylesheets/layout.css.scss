@@ -1,6 +1,17 @@
 @import "globals/all";
 @import "compass/css3";
 
+// preloader
+.spinner {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("/assets/portfolio/spinner.gif") 50% 50% no-repeat #000000;
+}
+
 .wrapper {
   width:90%;
   margin:0 5%;
@@ -249,16 +260,7 @@ img[rel="logo"] {
 
 
 
-// preloader
-.spinner {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url("/assets/spinner.gif") 50% 50% no-repeat #000000;
-}
+
 
 
 
