@@ -148,15 +148,22 @@ section {
   margin:0!important;
 }
 
+.home-page {
+  .content {
+    @include column(6);
+  }
+}
+
 .portfolio-page {
-  section { background:$grey; }
+  section { background:$grey; padding-top:2em; }
   .thumbnail {
     @include column(4);
     overflow: hidden;
-    height: 14em;
+    max-height: 14em;
     margin-bottom: 1.5em;
+    border:4px solid darken($grey, 5%);
     img {
-      width:200%;
+      width:100%;
       -webkit-transition: all .2s ease-in-out;
       &:hover { -webkit-transform: scale(1.1); }
     }
@@ -192,10 +199,15 @@ section {
     margin:0!important;
   }
 
-
   aside {
     @include column(4);
   }
+
+  article {
+    border-right:1px solid #efefef;
+  }
+
+  section { background:$grey; padding:4em 0 4em 0;}
 
   .image {
     @include column(5); 
