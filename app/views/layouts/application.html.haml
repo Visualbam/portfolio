@@ -12,3 +12,8 @@
         = yield
     = render 'layouts/includes/footer'
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    :javascript
+      jQuery("body").prepend('<div class="spinner"></div>');
+      jQuery(document).ready(function() {
+          jQuery(".spinner").fadeOut(800);
+      });

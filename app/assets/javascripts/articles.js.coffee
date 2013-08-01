@@ -13,7 +13,7 @@ $ ->
 $ ->
 
   $bars = $(".colorBar")
-  colors = ["#185479", "#0078a3", "#a7d6ee", "#f8f9f4"]
+  colors = ["#444444", "#35baff", "#a4e3ff", "#e9f9ff"]
   
   #shuffle will shuffle thebars  
   shuffleColors = true

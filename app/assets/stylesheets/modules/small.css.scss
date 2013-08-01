@@ -50,7 +50,7 @@ nav {
   border-bottom: 2px solid #efefef; 
   z-index: 15;
   a {
-    color: $blue;  
+    color: $darkblue;  
     display: inline-block;  
     width: 10em;  
     text-align: center;  
@@ -85,6 +85,10 @@ nav {
 }
 
 
+
+
+
+
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -107,7 +111,7 @@ nav {
 }
 
 
-  article {
+  section {
     @include column(12);
     background:white;
     border-bottom: 1px solid #efefef;
@@ -116,7 +120,29 @@ nav {
   }
 
 
-.article-excerpt {
+
+
+
+
+.portfolio-page {
+  .thumbnail {
+    @include column(4);
+    overflow: hidden;
+    height: 14em;
+    margin-bottom: 1.5em;
+    img {
+      width:200%;
+      -webkit-transition: all .2s ease-in-out;
+      &:hover { -webkit-transform: scale(1.1); }
+    }
+  }
+}
+
+
+
+
+
+.article-page {
 
   h2 {
     margin:0;
@@ -139,6 +165,13 @@ nav {
     background:white;
     border-bottom: 1px solid #efefef;
     padding:1.5em;
+    margin:0!important;
+  }
+  section {
+    @include column(12);
+    background:white;
+    border-bottom: 1px solid #efefef;
+    padding:0!important;
     margin:0!important;
   }
 
@@ -192,8 +225,16 @@ img[rel="logo"] {
 
 
 
-
-
+// preloader
+.spinner {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(spinner.gif) 50% 50% no-repeat #000000;
+}
 
 
 
@@ -236,7 +277,6 @@ $icons: ('save' '\1F4BE'),
 Color variables, just to make stuff easier to read
 */
 $red: rgb(235, 80, 66);
-$blue: rgb(90, 120, 255);
 $yellow: rgb(255, 255, 95);
 $green: rgb(180, 255, 92);
 $fb-blue: #3B5998;
