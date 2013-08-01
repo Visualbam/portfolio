@@ -1,0 +1,322 @@
+@import "globals/all";
+@import "compass/css3";
+
+/* Global Reset & Standards ---------------------- */
+*, *:before, *:after { @include box-sizing(border-box); }
+html { font-size: 100%; }
+body { margin: 0; padding: 0; background: $white; line-height: 1; color: $bodyFontColor; position: relative;  }
+
+@media only screen and (min-width: 48em) {
+  body { font-size: ms(0); }
+}
+
+::-moz-selection, ::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* Links ---------------------- */
+a img { border:none; }
+a { color: $mainColor; text-decoration: none; line-height: inherit; }
+a:hover { color: darken($mainColor, 5%); transition: all 0.2s ease-in-out; }
+a:focus { color: darken($mainColor, 5%); }
+p a, p a:visited { line-height: inherit; }
+
+/* Misc ---------------------- */
+.left        { float: left; }
+.right       { float: right; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+.hide        { display: none; }
+.hide-override { display: none !important; }
+.highlight   { background: $highlightColor; }
+
+/* Reset for strange margins by default on <figure> elements */
+figure { margin: 0; }
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
+  margin:0;
+  padding:0;
+  direction: $textDirection;
+}
+
+p { font-family: inherit; font-weight: $bodyFontWeight; font-size: 1em; line-height: 1.6; margin-bottom: 1.25em;
+  &.lead { font-size: 1em * 1.25; line-height: 1.6; margin-bottom: 1.25em; }
+}
+aside p { font-size: 1em - 1; line-height: 1.35; font-style: italic; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headerFontFamily;
+  font-weight: $headerFontWeight;
+  font-style: $headerFontStyle;
+  color: $headerFontColor;
+  text-rendering: optimizeLegibility;
+  line-height: 1.1;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  small { font-size: 60%; color: lighten($headerFontColor, 30%); line-height: 0; }
+}
+
+h1 { font-size: 2.25em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px; height: 0; }
+
+.subheader { line-height: 1.3; color: lighten($headerFontColor, 30%); font-weight: 300; margin-bottom: 1.25em; }
+
+em, i { font-style: italic; line-height: inherit; }
+strong, b { font-weight: bold; line-height: inherit; }
+small { font-size: 60%; line-height: inherit; }
+code { font-weight: bold; background: $highlightColor; }
+
+/* Lists ---------------------- */
+ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; list-style-position: inside; }
+ul {
+  li {
+    ul, ol { margin-#{$defaultFloat}: 20px; margin-bottom: 0; }
+  }
+  &.square, &.circle, &.disc { margin-#{$defaultFloat}: 1.25em; }
+  &.square { list-style-type: square;
+    li ul { list-style: inherit; }
+  }
+  &.circle { list-style-type: circle;
+    li ul { list-style: inherit; }
+  }
+  &.disc { list-style-type: disc;
+    li ul { list-style: inherit; }
+  }
+  &.no-bullet { list-style: none; }
+  &.large li { line-height: 21px; }
+}
+ol { margin-#{$defaultFloat}: 20px;
+  li {
+    ul, ol { margin-#{$defaultFloat}: 20px; margin-bottom: 0; }
+  }
+}
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix {
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  *zoom: 1;
+}
+
+
+/* Blockquotes ---------------------- */
+blockquote, blockquote p { line-height: 1.5; color: lighten($headerFontColor, 30%); }
+blockquote { margin: 0 0 1.25em; padding: 9px 20px 0 19px; border-#{$defaultFloat}: 1px solid #ddd;
+  cite { display: block; font-size: 1em - 1; color: lighten($headerFontColor, 20%);
+    &:before { content: "\2014 \0020"; }
+    a, a:visited { color: lighten($headerFontColor, 20%); }
+  }
+}
+
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: $headerFontColor; border-bottom: 1px solid #ddd; cursor: help; }
+abbr { text-transform: none; }
+
+
+/* Tooltips ---------------------- */
+.has-tip { border-bottom: $hasTipBorderBottom; cursor: help; font-weight: $hasTipFontWeight; color: $hasTipFontColor;
+
+  &:hover, &:focus { border-bottom: $hasTipBorderBottomHover; color: $hasTipFontColorHover; }
+  &.tip-left, &.tip-right { float: none !important; }
+
+}
+
+.tooltip { display: none; background: $tooltipBackgroundColor; background: rgba($tooltipBackgroundColor,$tooltipBackgroundOpacity); position: absolute; color: $tooltipFontColor; font-weight: $tooltipFontWeight; font-size: $tooltipFontSize; padding: 5px; z-index: 999; @include border-radius($tooltipBorderRadius); line-height: normal;
+
+  &>.nub { display: block; width: 0; height: 0; border: solid 5px; border-color: transparent transparent $tooltipBackgroundColor transparent; border-color: transparent transparent rgba($tooltipBackgroundColor,$tooltipBackgroundOpacity) transparent; position: absolute; top: -10px; #{$defaultFloat}: 10px; }
+  &.tip-override>.nub { border-color: transparent transparent $tooltipBackgroundColor transparent !important; border-color: transparent transparent rgba($tooltipBackgroundColor,$tooltipBackgroundOpacity) transparent !important; top: -10px !important; }
+  &.tip-top>.nub { border-color: $tooltipBackgroundColor transparent transparent transparent; border-color: rgba($tooltipBackgroundColor,$tooltipBackgroundOpacity) transparent transparent transparent; top: auto; bottom: -10px; }
+
+  &.tip-left, &.tip-right { float: none !important; }
+
+  &.tip-left>.nub { border-color: transparent transparent transparent $tooltipBackgroundColor; border-color: transparent transparent transparent rgba($tooltipBackgroundColor,$tooltipBackgroundOpacity); right: -10px; left: auto; }
+  &.tip-right>.nub { border-color: transparent $tooltipBackgroundColor transparent transparent; border-color: transparent rgba($tooltipBackgroundColor,$tooltipBackgroundOpacity) transparent transparent; right: auto; left: -10px; }
+
+  &.noradius { @include border-radius(0); }
+  &.opened { color: $hasTipFontColorHover !important; border-bottom: $hasTipBorderBottomHover !important; }
+
+}
+
+/* Alerts ---------------------- */
+
+div.alert-box { display: block; padding: 6px 7px 7px; font-weight: bold; font-size: ms(0); color: $white; background-color: $mainColor; border: 1px solid rgba(#000,.1); margin-bottom: 12px; @include border-radius(3px); text-shadow: 0 -1px rgba(#000,.3); position: relative;
+
+  &.success { background-color: $successColor; color: #fff; text-shadow: 0 -1px rgba(#000,.3); }
+  &.alert { background-color: $alertColor; color: #fff; text-shadow: 0 -1px rgba(#000,.3); }
+  &.secondary { background-color: $secondaryColor; color: darken($secondaryColor, 60%); text-shadow: 0 1px rgba(#fff,.3); }
+
+  a.close { color: #333; position: absolute; #{$defaultOpposite}: 4px; top: -1px; font-size: ms(1); opacity: 0.2; padding: 4px; }
+  a.close:hover, a.close:focus { opacity: 0.4; }
+
+}
+
+
+/* Inline Link List */
+ul.inline-list, ul.link-list { margin: 0 0 $linkListBottomMargin; padding: 0; list-style: none; overflow: hidden;
+
+  & > li { list-style: none; float: $defaultFloat; margin-#{$defaultFloat}: 22px; display: block;
+
+    & > * { display: block; }
+  }
+}
+
+/* Panels ---------------------- */
+@mixin panel() {
+  background: darken($white, 5%);
+  border: solid 1px darken($white, 10%);
+  margin: 0 0 22px 0;
+  padding: 20px;
+  &>:first-child {
+    margin-top: 0;
+  }
+  &>:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.panel { @include panel();
+
+  &>:first-child { margin-top: 0; }
+  &>:last-child { margin-bottom: 0; }
+
+  &.callout { background: $mainColor; color: #fff; border-color: darken($mainColor, 10%); @include box-shadow(inset 0px 1px 0px rgba(255,255,255,0.5));
+    a { color: #fff; }
+    .button { background: $white; border: none; color: $mainColor; @include text-shadow(none);
+
+      &:hover, &:focus { background: rgba(255,255,255,0.8); }
+    }
+  }
+
+  &.radius { @include border-radius($buttonRadius); }
+
+}
+
+/* Video - Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/ ---------------------- */
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  &.widescreen { padding-bottom: 57.25%; }
+  &.vimeo { padding-top: 0; }
+
+  iframe, object, embed, video { position: absolute; top: 0; #{$defaultFloat}: 0; width: 100%; height: 100%; }
+}
+
+
+
+/* Tables ---------------------- */
+table { background: #fff; @include border-radius($tableBorderRadius); margin: 0 0 18px; border: 1px solid #ddd;  }
+
+table thead, table tfoot { background: #f5f5f5; }
+table thead tr th,
+table tfoot tr th,
+table tbody tr td,
+table tr td,
+table tfoot tr td { display: table-cell; font-size: ms(0); line-height: 18px; text-align: #{$defaultFloat}; }
+table thead tr th,
+table tfoot tr td { padding: 8px 10px 9px; font-size: ms(0); font-weight: bold; color: #222; }
+table thead tr th:first-child, table tfoot tr td:first-child { border-#{$defaultFloat}: none; }
+table thead tr th:last-child, table tfoot tr td:last-child { border-#{$defaultOpposite}: none; }
+
+table tbody tr.even,
+table tbody tr.alt { background: #f9f9f9; }
+table tbody tr:nth-child(even) { background: #f9f9f9; }
+table tbody tr td { color: #333; padding: 9px 10px; vertical-align: top; border: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only { display: none !important; }
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  .hide-on-print { display: none !important; }
+  .print-only { display: block !important; }
+  .hide-for-print { display: none !important; }
+  .show-for-print { display: inherit !important; }
+}

@@ -8,8 +8,7 @@
   %body
     = render 'layouts/includes/nav'
     .main-container
-      .main.wrapper.clearfix
-        = yield
+      = yield
     = render 'layouts/includes/footer'
     = javascript_include_tag "application", "data-turbolinks-track" => true
     :javascript
