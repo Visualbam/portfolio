@@ -154,7 +154,6 @@ nav {
 
 section {
   background:white;
-  border-bottom: 1px solid #efefef;
   padding:1.5em;
   margin:0!important;
 }
@@ -167,6 +166,18 @@ section {
 
 .portfolio-page {
   section { background:$grey; padding-top:2em; }
+  #about {
+    background:$mainColor;
+    position:relative;
+    .content {@include column(9);}
+    h1 {
+      letter-spacing: -0.083333em;
+      font-size:3em;
+      margin: 0;
+      font-weight: bold;
+    }
+    h3 {margin-top:0; color:white;}
+  }
   .thumbnail {
     @include column(4);
     overflow: hidden;
