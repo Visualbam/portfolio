@@ -177,14 +177,13 @@ section {
     h1 {
       letter-spacing: -0.083333em;
       font-size:3em;
-      margin: 0 0 0.25em 0;
+      margin: 0;
       font-weight: bold;
     }
     h3 {margin-top:0; color:white;}
   }
   section { background:$grey; padding-top:2rem; }
-  ul {list-style:none;}
-  figure {
+  .thumbnail {
     @include column(4);
     overflow: hidden;
     max-height: 14em;
