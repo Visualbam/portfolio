@@ -41,7 +41,7 @@ nav {
   ul {  
     padding: 0;  
     margin: 0 auto;  
-    height: 5rem;  
+    height: 5em;  
   }
   li {  
     display: inline;  
@@ -72,7 +72,7 @@ nav {
 }  
 
 .colorBar {
-  margin-top: -1.25rem;
+  margin-top: -1.25em;
 }
 }
 
@@ -88,10 +88,10 @@ header {
 }
 
 nav {  
-  height: 5.5rem;  
+  height: 5.5em;  
   width: 100%;  
   background: white;  
-  font-size: 0.75rem;  
+  font-size: 0.75em;  
   position: relative;  
   border-bottom: 2px solid #efefef; 
   z-index: 15;
@@ -101,8 +101,8 @@ nav {
     width: 10em;  
     text-align: center;  
     text-decoration: none;  
-    line-height: 5.5rem; 
-    letter-spacing: 0.1rem;
+    line-height: 5.5em; 
+    letter-spacing: 0.1em;
     font-weight: bold;
     text-transform: uppercase;
     &:hover, &:active {
@@ -114,7 +114,7 @@ nav {
     padding: 0; 
     margin: 0;
     float: right; 
-    height: 5.5rem;
+    height: 5.5em;
     li {
       display: inline;  
       float: left;
@@ -156,7 +156,7 @@ section {
   background:white;
   padding:1.5em;
   border-bottom: 1px solid #efefef;
-  padding:1.5rem;
+  padding:1.5em;
   margin:0!important;
 }
 
@@ -168,6 +168,7 @@ section {
 
 .portfolio-page {
   section { background:$grey; padding-top:2em; }
+<<<<<<< HEAD
   #about {
     background:$mainColor;
     position:relative;
@@ -181,11 +182,13 @@ section {
     h3 {margin-top:0; color:white;}
   }
   section { background:$grey; padding-top:2rem; }
+=======
+>>>>>>> parent of 252d801... updated css to rem
   .thumbnail {
     @include column(4);
     overflow: hidden;
-    max-height: 14rem;
-    margin-bottom: 1.5rem;
+    max-height: 14em;
+    margin-bottom: 1.5em;
     border:4px solid darken($grey, 5%);
     img {
       width:100%;
@@ -199,7 +202,7 @@ section {
     padding:1em 0 0 0;
     .admin {display:none;}
     p {
-      max-height: 6rem;
+      max-height: 6em;
       overflow: hidden;
     }
   }
@@ -208,7 +211,7 @@ section {
 .article-page {
 
   h2 {
-    margin:0 0 0.25rem 0;
+    margin:0 0 0.25em 0;
     a {
       &:hover { color:$lightblue;}
     }
@@ -220,7 +223,7 @@ section {
     @include column(8);
     background:white;
     border-bottom: 1px solid #efefef;
-    padding:1.5rem;
+    padding:1.5em;
     margin:0!important;
   }
 
@@ -232,7 +235,7 @@ section {
     border-right:1px solid #efefef;
   }
 
-  section { background:$grey; padding:4em 0 4rem 0;}
+  section { background:$grey; padding:4em 0 4em 0;}
 
   .image {
     @include column(5); 
@@ -252,10 +255,10 @@ section {
   .content {
     @include column(7); 
     float: right;
-    padding:0.75rem 0 0 0;
+    padding:0.75em 0 0 0;
     .admin {display:none;}
     p {
-      max-height: 6rem;
+      max-height: 6em;
       overflow: hidden;
     }
   }
@@ -272,29 +275,186 @@ img[rel="logo"] {
   margin-top: -2.3rem!important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/*
+================
+The Icon-object™
+================
+
+The Icon-Object™ that holds the unicode entities for our icons, so we can reference them by name instead of looking up the hex code every time we need one.
+*/
+
+$icons: ('save' '\1F4BE'),
+        ('delete' '\12as'),
+        ('fb' '\F30E'),
+        ('twitter' '\F309'),
+        ('bolt' '\26A1'),
+        ('danger' '\26A0'),
+        ('tick' '\2713'),
+        ('email' '\2709');
+;
+
+/*
+Color variables, just to make stuff easier to read
+*/
+$red: rgb(235, 80, 66);
+$yellow: rgb(255, 255, 95);
+$green: rgb(180, 255, 92);
+$fb-blue: #3B5998;
+$twitter-blue: #4099FF;
+
+/*
+=======================
+The Button Mixin.======
+=======================
+
+=It takes 3 arguments:=
+- the background-color ($bg),
+in our case we will pass it the color vars we defined above.
+
+- the icon ($icon),
+takes one of the named icons from the Icon-Object™
+
+- the icon position ($iconPosition)
+Vald values are 'left' and 'right'
+
+=And does fancy stuff=
+1. Figure out the lightness of the passed background-color via the lightness() function and set either a dark or a light text color.
+
+2. Loop over the Icon-Object™ until the name matches the passed $icon parameter and then
+
+  2.1 If $iconPosition == right select the :after element and set the corresponding unicode entity as the 'content' value. 
+*/
+
+@mixin button($bg, $icon:none, $iconPosition: right){
+  $color: black;
+  padding: 1.2em 2.3em;
+  /*
+  Setting the color based on the background, as described above (1)
+  */ 
+  @if lightness($bg) > 68% {
+    $color: desaturate(darken($bg, 35), 70);
+    &:hover, &:focus {
+      background: darken($bg, 5);
+      color: darken($color, 5);
+    }
+  }
+  @else {
+    $color: lighten($bg, 35);
+    &:hover, &:focus {
+      background: darken($bg, 5);
+      color: lighten($color, 5);
+    }
+  }
+  
+  /*
+  Adding the icons, see (2)
+  */
+  @each $thing in $icons{
+    @if nth($thing, 1) == $icon {
+      @if $iconPosition == right {  
+        padding-right: 3.5em;   
+        &:after {
+           content: nth($thing, 2);
+           right: 1.5em;
+        }
+      }
+       
+      @if $iconPosition == left {  
+        padding-left: 3.5em;     
+        &:before {
+           content: nth($thing, 2);
+           left: 1.5em;
+        }
+      }
+    }
+  }
+  
+  color: $color;
+  display: inline-block;
+  background: $bg;
+  @include transition(.3s);
+  font:{
+    family: sans-serif;
+    weight: 800;
+    size: .8em;
+  }
+  text:{
+    transform: uppercase;
+    decoration: none;
+  }
+  border-radius: .7em;
+  position: relative;
+      
+  &:before, &:after{
+    display: inline-block;
+    font-family: entypo;
+    position: absolute;    
+  }
+
+  &:active {
+    @include transform(scale(.92));
+  }
+  &:hover, &:focus {
+    border-radius: .5em;
+    box-shadow: 0 0 0 5px lighten($bg, 20);
+  }
+}
+
+/*
+Calling the Mixin for the different buttons
+*/
+.danger  { @include button($red, 'danger')   ;}
+.signup  { @include button($blue, 'tick', left); a {color:white;}}
+.save    { @include button($green,'save', right);}
+.fb      { @include button($fb-blue, 'fb', left); }
+.twitter { @include button($twitter-blue, 'twitter', left); }
+.power { @include button($yellow, 'bolt', right); }
 }
 
 
 
 @media screen and (max-width: 800px) {  
   nav {  
-  height: 5rem;  
-  font-size: 0.75rem;  
+  height: 5em;  
+  font-size: 0.75em;  
   border-bottom: 1px solid #efefef; 
     a {
-      width: 8.25rem;  
-      line-height: 5rem; 
+      width: 8.25em;  
+      line-height: 5em; 
 
     }
     ul {   
-      height: 5rem;
+      height: 5em;
     }
 }
   img[rel="logo"] {
     position: absolute;
     top: 50%;
     right: 0;
-    left: 1rem;
+    left: 1em;
     height: 100%;
     width:12rem;
     margin-top: -2rem!important;
