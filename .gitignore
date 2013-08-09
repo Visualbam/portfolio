@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+app/assets/stylesheets/layout.css.scss
+
+app/assets/stylesheets/layout.css.scss
