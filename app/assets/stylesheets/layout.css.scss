@@ -154,12 +154,9 @@ nav {
 
 section {
   background:white;
-<<<<<<< HEAD
   padding:1.5em;
-=======
   border-bottom: 1px solid #efefef;
   padding:1.5rem;
->>>>>>> 252d8015629f1eea5654b210bc7dc1bb501c36cd
   margin:0!important;
 }
 
@@ -170,7 +167,6 @@ section {
 }
 
 .portfolio-page {
-<<<<<<< HEAD
   section { background:$grey; padding-top:2em; }
   #about {
     background:$mainColor;
@@ -184,9 +180,7 @@ section {
     }
     h3 {margin-top:0; color:white;}
   }
-=======
   section { background:$grey; padding-top:2rem; }
->>>>>>> 252d8015629f1eea5654b210bc7dc1bb501c36cd
   .thumbnail {
     @include column(4);
     overflow: hidden;
