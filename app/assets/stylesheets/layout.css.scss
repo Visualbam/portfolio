@@ -168,23 +168,23 @@ section {
 
 .portfolio-page {
   section { background:$grey; padding-top:2em; }
-<<<<<<< HEAD
   #about {
+    padding:4em 0 4em 4em;
     background:$mainColor;
     position:relative;
     .content {@include column(9);}
+    a {color:white; font-weight:bold; border-bottom:1px dashed white; &:hover {color:darken($mainColor, 20%);}}
     h1 {
       letter-spacing: -0.083333em;
       font-size:3em;
-      margin: 0;
+      margin: 0 0 0.25em 0;
       font-weight: bold;
     }
     h3 {margin-top:0; color:white;}
   }
   section { background:$grey; padding-top:2rem; }
-=======
->>>>>>> parent of 252d801... updated css to rem
-  .thumbnail {
+  ul {list-style:none;}
+  figure {
     @include column(4);
     overflow: hidden;
     max-height: 14em;
