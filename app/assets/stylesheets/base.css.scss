@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $headerFontColor;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
   margin-top: 1em;
   small { font-size: 60%; color: lighten($headerFontColor, 30%); line-height: 0; }
 }
@@ -75,9 +75,11 @@ small { font-size: 60%; line-height: inherit; }
 code { font-weight: bold; background: $highlightColor; }
 
 /* Lists ---------------------- */
-ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; list-style-position: inside; }
+
+ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25rem; list-style-position: outside; padding-left:1rem; }
 ul {
   li {
+    margin-bottom: 0.5rem;
     ul, ol { margin-#{$defaultFloat}: 20px; margin-bottom: 0; }
   }
   &.square, &.circle, &.disc { margin-#{$defaultFloat}: 1.25em; }
@@ -154,6 +156,15 @@ ol { margin-#{$defaultFloat}: 20px;
   }
   *zoom: 1;
 }
+
+
+/* Grid ---------------------- */
+.row {
+  @include column(12);
+  margin:0 1.04167%;
+  padding:1.5em;
+}
+
 
 
 /* Blockquotes ---------------------- */

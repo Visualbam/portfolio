@@ -12,14 +12,10 @@
   background: url("/assets/portfolio/spinner.gif") 50% 50% no-repeat #000000;
 }
 
-.wrapper {
-  width:90%;
-  margin:0 5%;
-}
 
 .email {
   background:$blue;
-  padding:2em;
+  padding:2rem;
   width: auto;
 }
 
@@ -27,7 +23,7 @@
   margin: 0.2rem 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0;
+  padding: 0.2rem 0;
 }
 
 
@@ -41,7 +37,7 @@ nav {
   ul {  
     padding: 0;  
     margin: 0 auto;  
-    height: 5em;  
+    height: 5rem;  
   }
   li {  
     display: inline;  
@@ -72,7 +68,7 @@ nav {
 }  
 
 .colorBar {
-  margin-top: -1.25em;
+  margin-top: -1.25rem;
 }
 }
 
@@ -91,14 +87,14 @@ nav {
   height: 5.5em;  
   width: 100%;  
   background: white;  
-  font-size: 0.75em;  
+  font-size: 0.75rem;  
   position: relative;  
   border-bottom: 2px solid #efefef; 
   z-index: 15;
   a {
     color: $darkblue;  
     display: inline-block;  
-    width: 10em;  
+    width: 10rem;  
     text-align: center;  
     text-decoration: none;  
     line-height: 5.5em; 
@@ -154,28 +150,37 @@ nav {
 
 section {
   background:white;
-  padding:1.5em;
   border-bottom: 1px solid #efefef;
-  padding:1.5em;
   margin:0!important;
+  display: inline-block;
+  display: block;
 }
 
-.home-page {
-  .content {
+section:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+#homepage {
+  .row{
     @include column(6);
   }
 }
 
 .portfolio-page {
-  section { background:$grey; padding-top:2em; }
+  section { background:$grey; padding-top:2rem; }
   #about {
-    padding:4em 0 4em 4em;
+    padding:4rem 0 4rem 4rem;
     background:$mainColor;
     position:relative;
     .content {@include column(9);}
     a {color:white; font-weight:bold; border-bottom:1px dashed white; &:hover {color:darken($mainColor, 20%);}}
     h1 {
-      letter-spacing: -0.083333em;
+      letter-spacing: -0.083333rem;
       font-size:3em;
       margin: 0;
       font-weight: bold;
@@ -186,8 +191,8 @@ section {
   .thumbnail {
     @include column(4);
     overflow: hidden;
-    max-height: 14em;
-    margin-bottom: 1.5em;
+    max-height: 14rem;
+    margin-bottom: 1.5rem;
     border:4px solid darken($grey, 5%);
     img {
       width:100%;
@@ -201,7 +206,7 @@ section {
     padding:1em 0 0 0;
     .admin {display:none;}
     p {
-      max-height: 6em;
+      max-height: 6rem;
       overflow: hidden;
     }
   }
@@ -210,7 +215,7 @@ section {
 .article-page {
 
   h2 {
-    margin:0 0 0.25em 0;
+    margin:0 0 0.25rem 0;
     a {
       &:hover { color:$lightblue;}
     }
@@ -222,7 +227,7 @@ section {
     @include column(8);
     background:white;
     border-bottom: 1px solid #efefef;
-    padding:1.5em;
+    padding:1.5rem;
     margin:0!important;
   }
 
@@ -254,11 +259,29 @@ section {
   .content {
     @include column(7); 
     float: right;
-    padding:0.75em 0 0 0;
+    padding:0.75rem 0 0 0;
     .admin {display:none;}
     p {
-      max-height: 6em;
+      max-height: 6rem;
       overflow: hidden;
+    }
+  }
+}
+
+
+#resumepage {
+  #summary {
+    .row {
+      @include column(9);
+    }
+  }
+  #experience{
+    .job {
+      @include column(4);
+      h5 {margin-bottom:0; margin-top:0; font-weight:bold;}
+      h6 {margin-top:0.25rem;margin-bottom:0;}
+      p {color:#999;font-size:0.85rem;}
+      ul {font-size:0.85rem;}
     }
   }
 }
@@ -268,7 +291,7 @@ img[rel="logo"] {
   position: absolute;
   top: 50%;
   right: 0;
-  left: 2em;
+  left: 2rem;
   height: 100%;
   width:14rem;
   margin-top: -2.3rem!important;
@@ -421,6 +444,7 @@ Vald values are 'left' and 'right'
     box-shadow: 0 0 0 5px lighten($bg, 20);
   }
 }
+
 
 /*
 Calling the Mixin for the different buttons
