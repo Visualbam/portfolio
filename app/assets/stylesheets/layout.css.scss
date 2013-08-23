@@ -74,7 +74,7 @@ nav {
 
 @media only screen and (min-width: 595px) {
 body, html {
-  background:#444;
+  background:#e9e9e9;
 }
 
 header {
@@ -212,7 +212,7 @@ section:after {
   }
 }
 
-.article-page {
+#articlepage {
 
   h2 {
     margin:0 0 0.25rem 0;
@@ -283,6 +283,46 @@ section:after {
       p {color:#999;font-size:0.85rem;}
       ul {font-size:0.85rem;}
     }
+  }
+}
+
+
+#articlepage {
+  #sidebar{
+    width:285px;
+    padding:2.25rem 1.5em 0 1.5rem;
+    border-right:2px solid #e7e7e9;
+    position:fixed;
+    height: 100%;
+    max-height: 100%;
+    background: white;
+    z-index: 2;
+    float: left;
+    overflow: auto;
+    overflow-x: hidden;
+    input {
+      width: 100%;
+    }
+    input:focus, textarea:focus, {
+      box-shadow: none;
+      outline: none;
+    }
+    ul {
+      list-style-type: none;
+      padding-left:0;
+      a {color:#b8b9bf; text-transform:uppercase; font-weight:bold; font-size:0.85rem;}
+      li {float:left; margin-right:0.75rem;}
+    }
+  }
+  #content {
+    position:fixed;
+    padding:2.25rem 1rem 0 2rem;
+    height: 100%;
+    min-height: 100%;
+    background-color:#eee;
+    width: 100%;
+    left:285px;
+    z-index: 1;
   }
 }
 
