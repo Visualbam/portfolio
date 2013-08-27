@@ -34,6 +34,10 @@ nav {
   font-size: 11pt;  
   font-weight: bold;  
   position: relative;
+  h1 {
+    position:absolute!important;
+    margin-left:-99999em!important;
+  }
   ul {  
     padding: 0;  
     margin: 0 auto;  
