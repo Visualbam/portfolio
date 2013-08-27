@@ -14,7 +14,7 @@
           %h2= link_to article.title, article
           %p= article.body
           .meta
-            = link_to 'Read More...'
+            = link_to 'Read More...', article_path(article)
             .admin
               = link_to 'Edit', edit_article_path(article)
               = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete

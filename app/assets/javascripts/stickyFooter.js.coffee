@@ -21,7 +21,7 @@ stickyFooter = ->
     offset = window.innerHeight - document.body.offsetHeight
     current = parseInt($("footer").css("margin-top"))
     $("footer").css "margin-top": (current + offset) + "px"  if current + offset > parseInt($("footer").css("margin-top"))
-$(window).load ->
+$(window).ready ->
   stickyFooter()
 
 $(window).resize ->

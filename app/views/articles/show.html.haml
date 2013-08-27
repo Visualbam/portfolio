@@ -1,29 +1,39 @@
-
-%p#notice= notice
-%p
-  %strong Title:
-  = @article.title
-%p
-  %strong Body:
-  = @article.body
-= link_to 'Edit', edit_article_path(@article)
-= link_to 'Back', articles_path
-%hr
--#
-  %h2 Comments
-  = form_for([@article, @article.comments.build]) do |f|
-    .field
-      = f.label :name
-      %br/
-      = f.text_field :name
-    .field
-      = f.label :email
-      %br/
-      = f.text_field :email
-    .field
-      = f.label :body
-      %br/
-      = f.text_area :body
-    %p= f.submit
-  %hr
-  = render @article.comments
+#articlepage
+  %section#sidebar
+    %input{:placeholder => "Search ... This doesn't work yet", :type => "text"}/
+    %hr
+    %ul
+      %li
+        %a{:href => '#'} Recent
+      %li
+        %a{:href => '#'}Featured
+  %section#content
+    %article
+      %p#notice= notice
+      %p
+        %strong Title:
+        = @article.title
+      %p
+        %strong Body:
+        = @article.body
+      / = link_to 'Edit', edit_article_path(@article)
+      / = link_to 'Back', articles_path
+      %hr
+      -#
+        %h2 Comments
+        = form_for([@article, @article.comments.build]) do |f|
+          .field
+            = f.label :name
+            %br/
+            = f.text_field :name
+          .field
+            = f.label :email
+            %br/
+            = f.text_field :email
+          .field
+            = f.label :body
+            %br/
+            = f.text_area :body
+          %p= f.submit
+        %hr
+        / = render @article.comments

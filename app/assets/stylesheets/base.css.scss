@@ -159,10 +159,23 @@ ol { margin-#{$defaultFloat}: 20px;
 
 
 /* Grid ---------------------- */
-.row {
-  @include column(12);
+.row, footer {
   margin:0 1.04167%;
   padding:1.5em;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 90.5rem;
+}
+
+.row:after, footer:after {
+    clear: both;
+    content: ".";
+    display: table;
+    height: 0;
+    visibility: hidden;
 }
 
 
@@ -308,14 +321,6 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   font-size: 0.75em;
   font-weight: bold;
 }
-
-
-
-
-
-
-
-
 
 
 
