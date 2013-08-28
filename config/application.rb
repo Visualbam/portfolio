@@ -4,12 +4,11 @@ require 'rails/all'
 
 # Assets should be precompiled for production (so we don't need the gems loaded then)
 Bundler.require(*Rails.groups(assets: %w(development test)))
-# config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
 module Portfolio
   class Application < Rails::Application
 
-    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+    #config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

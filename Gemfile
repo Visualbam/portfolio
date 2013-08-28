@@ -25,7 +25,7 @@ group :assets do
   gem 'haml'
   gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
   gem 'activerecord'
-  gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor'
+  #gem 'ckeditor'
   gem 'carrierwave'
   gem 'mini_magick'
   

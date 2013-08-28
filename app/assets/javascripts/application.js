@@ -15,4 +15,3 @@
 //= require articles
 //= require turbolinks
 //= require stickyFooter
-//= require ckeditor/init
