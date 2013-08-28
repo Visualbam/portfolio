@@ -284,9 +284,9 @@ section:after {
     padding:0.75rem 0 0 0;
     .admin {display:none;}
     .excerpt {
-      max-height: 6rem;
+      max-height: 9rem;
       overflow: hidden;
-      margin: 1rem 0;
+      margin: 0 0 1rem 0;
     }
   }
 
@@ -319,7 +319,7 @@ section:after {
   #content {
     position:fixed;
     overflow: scroll;
-    padding:2.25rem 1rem 6.25rem 2rem;
+    padding:2.75rem 1rem 6.25rem 2rem;
     height: 100%;
     min-height: 100%;
     background-color:#eee;
