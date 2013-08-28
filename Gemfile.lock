@@ -6,14 +6,6 @@ GIT
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
 
-GIT
-  remote: https://github.com/galetahub/ckeditor
-  revision: 95c05eb23b81298dfb204da72ce04a8141118ce5
-  specs:
-    ckeditor (4.0.5)
-      mime-types
-      orm_adapter
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -86,7 +78,6 @@ GEM
     minitest (4.7.5)
     multi_json (1.7.9)
     normalize-rails (2.1.1)
-    orm_adapter (0.4.0)
     pg (0.16.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -151,7 +142,6 @@ DEPENDENCIES
   activerecord
   better_errors
   carrierwave
-  ckeditor!
   coffee-rails (~> 4.0.0.beta1)
   compass-rails!
   haml
