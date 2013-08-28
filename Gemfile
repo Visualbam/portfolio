@@ -13,6 +13,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'pg'
+  gem "better_errors"
 end
 
 # Gems used only for assets and not required
@@ -23,6 +24,10 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'haml'
   gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+  gem 'ckeditor'
+  gem 'carrierwave'
+  gem 'mini_magick'
+  gem 'simple_form'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby

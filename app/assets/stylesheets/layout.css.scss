@@ -175,10 +175,11 @@ section:after {
 }
 
 .portfolio-page {
+  section { padding:0; }
   #about {
     background:$mainColor;
     position:relative;
-    .content {@include column(12);}
+    .content {padding:4em 0;}
     a {color:white; font-weight:bold; border-bottom:1px dashed white; &:hover {color:darken($mainColor, 20%);}}
     h1 {
       letter-spacing: -0.083333rem;
@@ -186,30 +187,21 @@ section:after {
       margin: 0;
       font-weight: bold;
     }
-    h3 {margin:0; color:white;}
+    h2 {margin:0; color:white;}
   }
-  section { background:$grey; padding-top:2rem; }
+  // section { background:$grey; padding-top:2rem; }
   .thumbnail {
     @include column(4);
     overflow: hidden;
     max-height: 24rem;
-    margin-bottom: 1.5rem;
-    border:4px solid darken($grey, 5%);
+    width:33.333%;
+    margin:0;
+    border:4px solid white;
     img {
       width:100%;
       -webkit-transition: all .2s ease-in-out;
       -webkit-transform: scale(1.05);
       &:hover { -webkit-transform: scale(1.1); }
-    }
-  }
-  .content {
-    @include column(12); 
-    float: right;
-    padding:1em 0 0 0;
-    .admin {display:none;}
-    p {
-      max-height: 6rem;
-      overflow: hidden;
     }
   }
 }
@@ -269,9 +261,10 @@ section:after {
     display: inline-block;
     margin:0;
     overflow: hidden;
-    height: 200px;
+    max-height: 225px;
     img {
       width:200%;
+
       -webkit-transition: all .2s ease-in-out;
       &:hover { -webkit-transform: scale(1.1); }
     }
@@ -390,7 +383,7 @@ footer {
 
 .copyright {
   p, a {margin-bottom:0; color:white; font-size:0.75em;}
-  background-color:darken($grey, 70%);; 
+  background-color:darken($grey, 70%); 
   padding-top:18px;
 }
 
@@ -685,7 +678,7 @@ Vald values are 'left' and 'right'
 Calling the Mixin for the different buttons
 */
 .danger  { @include button($red, 'danger')   ;}
-.signup  { @include button($blue, 'tick', left); a {color:white;}}
+.signup, .primary  { @include button($blue, 'tick', left); a {color:white;}}
 .save    { @include button($green,'save', right);}
 .fb      { @include button($fb-blue, 'fb', left); }
 .twitter { @include button($twitter-blue, 'twitter', left); }
