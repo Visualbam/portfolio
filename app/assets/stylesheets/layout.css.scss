@@ -625,6 +625,7 @@ Vald values are 'left' and 'right'
 
 @mixin button($bg, $icon:none, $iconPosition: right){
   $color: black;
+  padding: 1.2em 2.3em;
   /*
   Setting the color based on the background, as described above (1)
   */ 
@@ -649,8 +650,10 @@ Vald values are 'left' and 'right'
   @each $thing in $icons{
     @if nth($thing, 1) == $icon {
       @if $iconPosition == right {  
+        padding-right: 3.5em;   
         &:after {
            content: nth($thing, 2);
+           right: 1.5em;
         }
       }
        
@@ -658,6 +661,7 @@ Vald values are 'left' and 'right'
         padding-left: 3.5em;     
         &:before {
            content: nth($thing, 2);
+           left: 1.5em;
         }
       }
     }
