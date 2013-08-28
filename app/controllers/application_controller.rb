@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   respond_to :html, :json
   
-  before_filter :find_asset, :only => [:destroy]
+  # before_filter :find_asset, :only => [:destroy]
   before_filter :ckeditor_authorize!
 
   protected

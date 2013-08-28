@@ -10,15 +10,16 @@
   %section#content
     - @articles.each do |article|
       %article
-        .content
-          %h2= link_to article.title, article
-          %p= raw(article.body)
-          .meta
-            = link_to 'Read More...', article_path(article), :class => 'primary'
-            / = link_to 'Edit', edit_article_path(article)
-            = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
-        .image
-          = link_to (image_tag("img2.jpg")), article
+        .articlewrap.clearfix
+          .content
+            %h2= link_to article.title, article
+            %p= raw(article.body)
+            .meta
+              = link_to 'Read More...', article_path(article), :class => 'primary'
+              / = link_to 'Edit', edit_article_path(article)
+              / = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
+          .image
+            = link_to (image_tag("img2.jpg")), article
 
 
 

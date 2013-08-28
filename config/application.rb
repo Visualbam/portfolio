@@ -8,8 +8,7 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Portfolio
   class Application < Rails::Application
-    
-    config.force_ssl = true if Rails.env.production?
+
     config.assets.initialize_on_precompile = false
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 

@@ -45,20 +45,19 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to articles_url }
+      format.html { redirect_to articles_path }
       format.json { head :no_content }
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def article_params
-      params.require(:article).permit(:title, :body)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def article_params
+    params.require(:article).permit(:title, :body)
+  end
 
 end
