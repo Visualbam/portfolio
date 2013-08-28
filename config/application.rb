@@ -9,7 +9,6 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 module Portfolio
   class Application < Rails::Application
 
-    # config.assets.initialize_on_precompile = false
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
     # Settings in config/environments/* take precedence over those specified here.

@@ -28,7 +28,6 @@ group :assets do
   gem 'carrierwave'
   gem 'mini_magick'
   
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
 
