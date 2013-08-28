@@ -1,6 +1,6 @@
 Portfolio::Application.routes.draw do
   
-  
+  mount Ckeditor::Engine => '/ckeditor'
   root :to => "static_pages#home"
   # Static pages
   get "/resume" => 'static_pages#resume'
