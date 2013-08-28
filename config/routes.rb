@@ -8,7 +8,7 @@ Portfolio::Application.routes.draw do
   get "/blog" => "static_pages#blog"
   get "/contact" => "static_pages#contact"
 
-  mount Ckeditor::Engine => '/ckeditor'
+  mount Ckeditor::Engine => "/ckeditor"
 
   resources :articles do
     resources :comments
