@@ -27,7 +27,7 @@ group :assets do
   gem 'ckeditor'
   gem 'carrierwave'
   gem 'mini_magick'
-  gem 'simple_form'
+  
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
@@ -36,6 +36,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'simple_form'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
