@@ -14,7 +14,7 @@
           .content
             .excerpt
               %h2= link_to article.title, article
-              = raw(article.body)
+              = raw article.body.truncate(325)
             .meta
               = link_to 'Read More...', article_path(article), :class => 'primary'
               / = link_to 'Edit', edit_article_path(article)

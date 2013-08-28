@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require ckeditor-jquery
+//= require ckeditor/basepath
+//= require ckeditor/config
 //= require articles
 //= require turbolinks
 //= require stickyFooter

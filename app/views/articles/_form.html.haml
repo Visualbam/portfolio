@@ -8,9 +8,8 @@
         - @article.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.input :title, label: 'Title'
-  %br
+    = f.input :title, :placeholder => 'Article Title'
   .field
     = f.text_area :body, :class => 'ckeditor'
   .actions
-    = f.submit
+    = f.submit :class => 'primary'

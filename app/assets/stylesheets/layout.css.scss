@@ -230,7 +230,7 @@ section:after {
 
 
   h2 {
-    margin:0 0 0.25rem 0;
+    margin:0 0 0.5rem 0;
     a {
       &:hover { color:$lightblue;}
     }
@@ -281,10 +281,10 @@ section:after {
   .content {
     @include column(7); 
     float: right;
-    padding:0.75rem 0 0 0;
+    padding:0.5rem 0 0 0;
     .admin {display:none;}
     .excerpt {
-      max-height: 9rem;
+      max-height: 9.25rem;
       overflow: hidden;
       margin: 0 0 1rem 0;
     }
@@ -326,6 +326,22 @@ section:after {
     width: 100%;
     left:285px;
     z-index: 1;
+  }
+
+  .new {
+    label {display:none;}
+    input {
+      border-radius:0;
+      width: 100%;
+      height: 3rem;
+      font-size: 1.25rem;
+    }
+    .primary {
+      padding:0;
+      height: 3.5em;
+      border:0.25rem solid darken($blue, 10%);
+      &:hover {box-shadow:none;}
+    }
   }
 }
 
@@ -691,7 +707,7 @@ Calling the Mixin for the different buttons
 .save    { @include button($green,'save', right);}
 .fb      { @include button($fb-blue, 'fb', left); }
 .twitter { @include button($twitter-blue, 'twitter', left); }
-.power { @include button($yellow, 'bolt', right); }
+.power   { @include button($yellow, 'bolt', right); }
 }
 
 
