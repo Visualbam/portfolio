@@ -283,9 +283,10 @@ section:after {
     float: right;
     padding:0.75rem 0 0 0;
     .admin {display:none;}
-    p {
+    .excerpt {
       max-height: 6rem;
       overflow: hidden;
+      margin: 1rem 0;
     }
   }
 

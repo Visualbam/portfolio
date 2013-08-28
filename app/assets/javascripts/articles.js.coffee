@@ -38,3 +38,7 @@ $ ->
       background: colors[c]
     ).appendTo $bars
     c++
+
+# ckeditor
+$(".ckeditor").ckeditor {}
+

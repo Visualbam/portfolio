@@ -11,6 +11,6 @@
     = f.input :title, label: 'Title'
   %br
   .field
-    = f.input :body
+    = f.text_area :body, :class => 'ckeditor'
   .actions
     = f.submit
