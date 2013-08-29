@@ -18,9 +18,9 @@
             .meta
               = link_to 'Read More...', article_path(article), :class => 'primary'
               / = link_to 'Edit', edit_article_path(article)
-              / = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
+              = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete, :style => 'color:white;'
           .image
-            = link_to (image_tag("img2.jpg")), article
+            = image_tag article.image.url
 
 
 

@@ -10,7 +10,8 @@
   %section#content
     %article
       .imagewrap
-        = link_to (image_tag("img2.jpg"))
+        / = link_to (image_tag("img2.jpg"))
+        = image_tag @article.image.url
       .contentwrap
         %p#notice= notice
         %h1= @article.title

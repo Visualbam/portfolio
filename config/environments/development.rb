@@ -25,6 +25,6 @@ Portfolio::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
 
-  config.serve_static_assets = false
+  config.serve_static_assets = true
   
 end
