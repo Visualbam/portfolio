@@ -1,12 +1,4 @@
 #articlepage
-  %section#sidebar
-    %input{:placeholder => "Search ... This doesn't work yet", :type => "text"}/
-    %hr
-    %ul
-      %li
-        %a{:href => '#'} Recent
-      %li
-        %a{:href => '#'}Featured
   %section#content
     - @articles.each do |article|
       %article
@@ -14,7 +6,7 @@
           .content
             .excerpt
               %h2= link_to article.title, article
-              = raw article.body.truncate(325)
+              = raw article.body
             .meta
               = link_to 'Read More...', article_path(article), :class => 'primary'
               / = link_to 'Edit', edit_article_path(article)

@@ -38,6 +38,8 @@ GEM
     better_errors (0.9.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.1.4)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -58,6 +60,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     excon (0.13.4)
     execjs (2.0.1)
@@ -160,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   better_errors
+  binding_of_caller
   carrierwave
   ckeditor_rails
   coffee-rails (~> 4.0.0.beta1)

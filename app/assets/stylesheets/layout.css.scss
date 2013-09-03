@@ -317,15 +317,11 @@ section:after {
     }
   }
   #content {
-    position:fixed;
-    overflow: scroll;
     padding:2.75rem 1rem 6.25rem 2rem;
     height: 100%;
     min-height: 100%;
     background-color:#eee;
     width: 100%;
-    left:285px;
-    z-index: 1;
   }
 
   .new {
