@@ -6,7 +6,7 @@
           .articlewrap.clearfix
             .content
               .excerpt
-                %h2= link_to article.title, article
+                %h2.posthead= link_to article.title, article
                 = raw article.body
               .meta
                 = link_to 'Read More...', article_path(article), :class => 'primary'

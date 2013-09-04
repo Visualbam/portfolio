@@ -228,9 +228,13 @@ section:after {
 
 #articlepage {
 
+  h1 { 
+    &:first-of-type {font-weight:bold;}
+  }
 
   h2 {
     margin:0 0 0.75rem 0;
+    
     a {
       color:#434343;
       &:hover { color:#000;}
@@ -244,6 +248,7 @@ section:after {
     background:white;
     border-bottom: 1px solid #efefef;
     margin:0!important;
+    .posthead {font-weight:bold;}
     .articlewrap { padding:1.5rem; }
     .imagewrap {
       max-height: 20rem;
