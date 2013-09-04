@@ -1,31 +1,32 @@
 #articlepage
   %section#content
-    %article
-      .imagewrap
-        / = link_to (image_tag("img2.jpg"))
-        = image_tag @article.image.url
-      .contentwrap
-        %p#notice= notice
-        %h1= @article.title
-        = raw @article.body
-        / = link_to 'Edit', edit_article_path(@article)
-        / = link_to 'Back', articles_path
-        %hr
-        -#
-          %h2 Comments
-          = form_for([@article, @article.comments.build]) do |f|
-            .field
-              = f.label :name
-              %br/
-              = f.text_field :name
-            .field
-              = f.label :email
-              %br/
-              = f.text_field :email
-            .field
-              = f.label :body
-              %br/
-              = f.text_area :body
-            %p= f.submit
+    .row
+      %article
+        .imagewrap
+          / = link_to (image_tag("img2.jpg"))
+          = image_tag @article.image.url
+        .contentwrap
+          %p#notice= notice
+          %h1= @article.title
+          = raw @article.body
+          / = link_to 'Edit', edit_article_path(@article)
+          / = link_to 'Back', articles_path
           %hr
-          / = render @article.comments
+          -#
+            %h2 Comments
+            = form_for([@article, @article.comments.build]) do |f|
+              .field
+                = f.label :name
+                %br/
+                = f.text_field :name
+              .field
+                = f.label :email
+                %br/
+                = f.text_field :email
+              .field
+                = f.label :body
+                %br/
+                = f.text_area :body
+              %p= f.submit
+            %hr
+            / = render @article.comments

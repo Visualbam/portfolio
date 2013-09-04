@@ -232,7 +232,8 @@ section:after {
   h2 {
     margin:0 0 0.75rem 0;
     a {
-      &:hover { color:$lightblue;}
+      color:#434343;
+      &:hover { color:#000;}
     }
   }
 
@@ -281,10 +282,10 @@ section:after {
   .content {
     @include column(7); 
     float: right;
-    padding:0.5rem 0 0 0;
+    padding:0.25rem 0 0 0;
     .admin {display:none;}
     .excerpt {
-      max-height: 8.5rem;
+      max-height: 9.5rem;
       overflow: hidden;
       margin: 0 0 1rem 0;
     }

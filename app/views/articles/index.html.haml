@@ -1,18 +1,19 @@
 #articlepage
   %section#content
-    - @articles.each do |article|
-      %article
-        .articlewrap.clearfix
-          .content
-            .excerpt
-              %h2= link_to article.title, article
-              = raw article.body
-            .meta
-              = link_to 'Read More...', article_path(article), :class => 'primary'
-              / = link_to 'Edit', edit_article_path(article)
-              = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete, :style => 'color:white;'
-          .image
-            = image_tag article.image.url
+    .row
+      - @articles.each do |article|
+        %article
+          .articlewrap.clearfix
+            .content
+              .excerpt
+                %h2= link_to article.title, article
+                = raw article.body
+              .meta
+                = link_to 'Read More...', article_path(article), :class => 'primary'
+                / = link_to 'Edit', edit_article_path(article)
+                = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete, :style => 'color:white;'
+            .image
+              = image_tag article.image.url
 
 
 
