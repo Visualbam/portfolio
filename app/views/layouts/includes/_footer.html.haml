@@ -1,26 +1,25 @@
 #footer
   %footer 
     .row
+      = link_to(image_tag("logo-footer.svg", :alt => "Bruce McElroy Logo", :rel => "logo"), root_path)
+      %p My goal is to provide you with a service as a front end web developer that exceeds your expectations in a timely fashion.
+      %a{:href => "https://www.facebook.com/bruce.a.mcelroy"}
+        %i.icon-facebook-sign
+      %a{:href => "https://github.com/visualbam"}
+        %i.icon-github-sign
+      %a{:href => "http://www.linkedin.com/in/brucemcelroy"}
+        %i.icon-linkedin-sign
+      %a{:href => "http://instagram.com/visualbam"}
+        %i.icon-twitter-sign
+    .row
       %div
-        %h6
-          %strong Bruce McElroy Front End Web Designer
-        %p
-          I am a Front End Web Designer located in Pittsburgh, PA.  I am currently learning Ruby on Rails and have experience in most current frameworks including bootstrap, foundation and the semantic grid system.
+        %h6 Web design blogs for inspiriation —
+        %a{:href => "http://www.webdesignerdepot.com", :target => "_blank"} Web Designer Depot
+        %a{:href => "http://abduzeedo.com/", :target => "_blank"} Abduzeedo
+        %a{:href => "http://www.webdesignerdepot.com", :target => "_blank"} webdesignerdepot.com
+        %a{:href => "http://www.webdesignerdepot.com", :target => "_blank"} webdesignerdepot.com
       %div
-        %h6
-          %strong Go ahead stalk me
-        .social
-          = link_to "https://www.facebook.com/bruce.a.mcelroy", :target => "_blank" do
-            .facebook.icon
-          = link_to "https://github.com/Visualbam", :target => "_blank" do
-            .github.icon
-          = link_to "http://www.linkedin.com/in/brucemcelroy", :target => "_blank" do
-            .linkedin.icon
-          = link_to "http://instagram.com/visualbam", :target => "_blank" do
-            .instagram.icon
-      %div
-        %h6 
-          %strong Tell me what you think!
+        %h6 Tell me what you think!
         %p The suggestion form will be here soon!
 .copyright
   .row

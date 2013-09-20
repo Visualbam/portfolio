@@ -4,8 +4,9 @@ $regular: 400;
 $bold: 600;
 
 // Colors Settings
-$mainColor: #2ba6cb !default;
-$secondaryColor: #e9e9e9 !default;
+$primaryColor: #35b9ff !default;
+$secondaryColor: #444445 !default;
+
 $alertColor: #c60f13 !default;
 $successColor: #5da423 !default;
 $txtColor: #222 !default;
@@ -19,8 +20,13 @@ $darkblue:rgb(68, 68, 68);
 $blue:rgb(53, 185, 255);
 $lightblue:rgb(162, 227, 255);
 $beige:rgb(246, 245, 240);
-$grey:#e5e5e5;
+$grey:#979797;
+$lightGrey:#fbfbfb !default;
 $orange:rgb(229, 144, 26);
+
+// Navigation
+$headerHeight:8rem;
+
 
 // Font Settings
 $fontSmoothing: antialiased;
@@ -79,8 +85,8 @@ $tableBorderRadius: 3px !default;
 $hasTipBorderBottom: dotted 1px #ccc !default;
 $hasTipFontWeight: bold !default;
 $hasTipFontColor: #333 !default;
-$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%) !default;
-$hasTipFontColorHover: $mainColor !default;
+$hasTipBorderBottomHover: dotted 1px darken($primaryColor, 20%) !default;
+$hasTipFontColorHover: $primaryColor !default;
 $tooltipBackgroundColor: #000 !default;
 $tooltipBackgroundOpacity: 0.85 !default;
 $tooltipFontSize: 12px !default;
