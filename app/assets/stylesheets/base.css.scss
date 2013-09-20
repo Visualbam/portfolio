@@ -6,7 +6,7 @@
 html { font-size: 100%; }
 body { margin: 0; padding: 0; background: $white; line-height: 1; color: $bodyFontColor; position: relative;  }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48rem) {
   body { font-size: ms(0); }
 }
 
@@ -36,7 +36,7 @@ p a, p a:visited { line-height: inherit; }
 .hide-override { display: none !important; }
 .highlight   { background: $highlightColor; }
 
-/* Reset for strange margins by default on <figure> elements */
+/* Reset for strange margins by default on <figure> elrements */
 figure { margin: 0; }
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
@@ -45,10 +45,10 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
   direction: $textDirection;
 }
 
-p { font-family: inherit; font-weight: $bodyFontWeight; font-size: 1em; line-height: 1.6; margin-bottom: 1.25em;
-  &.lead { font-size: 1em * 1.25; line-height: 1.6; margin-bottom: 1.25em; }
+p { font-family: inherit; font-weight: $bodyFontWeight; font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem;
+  &.lead { font-size: 1rem * 1.25; line-height: 1.6; margin-bottom: 1.25rem; }
 }
-aside p { font-size: 1em - 1; line-height: 1.35; font-style: italic; }
+aside p { font-size: 1rem - 1; line-height: 1.35; font-style: italic; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headerFontFamily;
@@ -57,36 +57,36 @@ h1, h2, h3, h4, h5, h6 {
   color: $headerFontColor;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
-  margin-bottom: 0.75em;
-  margin-top: 1em;
+  margin-bottom: 0.75rem;
+  margin-top: 1rem;
   small { font-size: 60%; color: lighten($headerFontColor, 30%); line-height: 0; }
 }
 
-h1 { font-size: 2.25em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
+h1 { font-size: 2.25rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
 
 hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px; height: 0; }
 
-.subheader { line-height: 1.3; color: lighten($headerFontColor, 30%); font-weight: 300; margin-bottom: 1.25em; }
+.subheader { line-height: 1.3; color: lighten($headerFontColor, 30%); font-weight: 300; margin-bottom: 1.25rem; }
 
-em, i { font-style: italic; line-height: inherit; }
+rem, i { font-style: italic; line-height: inherit; }
 strong, b { font-weight: bold; line-height: inherit; }
 small { font-size: 60%; line-height: inherit; }
 code { font-weight: bold; background: $highlightColor; }
 
 /* Lists ---------------------- */
 
-ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25rem; list-style-position: outside; padding-left:1rem; }
+ul, ol, dl { font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rrem; list-style-position: outside; padding-left:1rrem; }
 ul {
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rrem;
     ul, ol { margin-#{$defaultFloat}: 20px; margin-bottom: 0; }
   }
-  &.square, &.circle, &.disc { margin-#{$defaultFloat}: 1.25em; }
+  &.square, &.circle, &.disc { margin-#{$defaultFloat}: 1.25rem; }
   &.square { list-style-type: square;
     li ul { list-style: inherit; }
   }
@@ -165,7 +165,7 @@ ol { margin-#{$defaultFloat}: 20px;
 /* Grid ---------------------- */
 .row, footer {
   margin:0 1.04167%;
-  padding:1.5em;
+  padding:1.5rem;
   width:100%;
   margin-left: auto;
   margin-right: auto;
@@ -186,8 +186,8 @@ ol { margin-#{$defaultFloat}: 20px;
 
 /* Blockquotes ---------------------- */
 blockquote, blockquote p { line-height: 1.5; color: lighten($headerFontColor, 30%); }
-blockquote { margin: 0 0 1.25em; padding: 9px 20px 0 19px; border-#{$defaultFloat}: 1px solid #ddd;
-  cite { display: block; font-size: 1em - 1; color: lighten($headerFontColor, 20%);
+blockquote { margin: 0 0 1.25rem; padding: 9px 20px 0 19px; border-#{$defaultFloat}: 1px solid #ddd;
+  cite { display: block; font-size: 1rem - 1; color: lighten($headerFontColor, 20%);
     &:before { content: "\2014 \0020"; }
     a, a:visited { color: lighten($headerFontColor, 20%); }
   }
@@ -287,7 +287,7 @@ ul.inline-list, ul.link-list { margin: 0 0 $linkListBottomMargin; padding: 0; li
   &.widescreen { padding-bottom: 57.25%; }
   &.vimeo { padding-top: 0; }
 
-  iframe, object, embed, video { position: absolute; top: 0; #{$defaultFloat}: 0; width: 100%; height: 100%; }
+  iframe, object, rembed, video { position: absolute; top: 0; #{$defaultFloat}: 0; width: 100%; height: 100%; }
 }
 
 
@@ -317,18 +317,18 @@ table tbody tr td { color: #333; padding: 9px 10px; vertical-align: top; border:
 ::-webkit-input-placeholder {
    font-weight: normal;
 }
-input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"] {
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="remail"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"] {
   border:1px solid #efefef;
-  height: 3em;
-  padding: 0.5em 0.5em 0.5em 1.5em;
-  border-radius:5em;
-  font-size: 0.75em;
+  height: 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border-radius:5rem;
+  font-size: 0.75rem;
   font-weight: bold;
 }
 
 nav h1 {
   position:absolute;
-  left:-9999em;
+  left:-9999rem;
 }
 
 
