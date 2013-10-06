@@ -34,36 +34,26 @@ header {
   nav {
     height: $headerHeight;
     a {
-      display: inline-block;
+      display:block;
+      width: 100%;
+      float: left;
       img {
         width: 18rem;
-        margin-bottom:0.5rem;;
+        margin-bottom:1rem;;
       }
     }
     ul {
       list-style: none;
-      display: block;
-      width: 100%;
-      clear: both;
+      padding-left:0;
       li {
         float: left;
         display: inline-block;
-        padding:0.25rem 0.75rem;
+        padding:0.5rem 0.75rem;
         font-size: 1.15rem;
         font-weight: bold;
         transition: all 0.25s ease-in-out;
         &:first-child {
           padding-left:0;
-        }
-        &:nth-child(2){
-          background:$secondaryColor;
-          border-radius: 0.25rem;
-          &:hover {
-            background: $primaryColor;
-          }
-          a {
-            color: white;
-          }
         }
         a {
           color:$secondaryColor;
@@ -71,51 +61,146 @@ header {
       }
     }
   }
+  @media screen and (min-width: 768px) {
+    nav {
+      a {
+        display: inline-block;
+        width: auto;
+      }
+      ul {
+        float: right;
+        width: auto;
+        margin-top: 1rem;
+      }
+    }
+  }
 }
 
 // Homepage 
-#main {
-  h1 {
-    font-weight: bold;
-    font-size:1.85rem;
-  }
-  .button {
-    display: block;
-    font-size:1.5rem;
-    text-shadow: 0 2px darken($primaryColor, 15%);
+#home {
+  section {
+    &:first-child {
+      h1 {
+        font-size:1.85rem;
+        font-weight: bold;
+      }
+      .button {
+        display: block;
+        font-size:1.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px darken($primaryColor, 15%);
+      }
+    }
+    &:last-child {
+      background:$secondaryColor;
+      img {
+        width: 100%;
+        max-width: 22rem;
+        display: block;
+        margin:0 auto;
+        @media screen and (min-width: 515px) {
+          // margin:-4rem auto 1rem;
+        }
+      }
+      h2 {
+        margin: 2rem 0 1rem;
+        font-weight: bold;
+      }
+      p, h2, h3 {
+        color: white;
+        text-align: center;
+      }
+      .button {
+        display: block;
+        font-size:1.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px darken($primaryColor, 15%);
+      }
+    }
+  }  
+  @media screen and (min-width: 768px) {
+    section {
+      &:first-child {
+        h1 {
+          font-size:2.25rem;
+        }
+        .button {
+          display: inline-block;
+          padding:1rem 4rem;
+        }
+      }
+      &:last-child {
+        img {
+          float: left;
+          margin-right: 2.5rem;
+        }
+        h2 {
+          margin-top: 2rem;
+        }
+        p, h2, h3 {
+          text-align: left;
+        }
+        .button {
+          display: inline-block;
+          padding:1rem 4rem;
+        }
+      }
+    }  
   }
 }
+        
 
-#portfolio {
-  background:$secondaryColor;
+.current {
+  color:red!important;
+  background:lightblue;
 }
 
 // Footer
 #footer {
   background:$lightGrey;
+  .row {
+    div {
+      width: 100%;
+    }
+  }
   img {
     width:10rem;
     margin-bottom: 1rem;
   }
   p {
     color: $grey;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   a {
-    margin-right: 0.75rem;
+    margin:0 0.75rem 1rem 0;
+    display: block;
     &:hover {
       text-decoration: none;
     }
   }
+  a[title$="social"] {
+    display: inline-block;
+  }
 
   [class^="icon-"], [class*=" icon-"] {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     color:$grey;
     &:hover {
       color:darken($grey, 20%);
     }
   }
+  @media screen and (min-width: 768px) {
+    .row {
+      div {
+        width: 29.333333%;
+        display: inline-block;
+        float: left;
+        margin-right: 1.5rem;
+      }
+    }
+  }
 }
+
 
 
 

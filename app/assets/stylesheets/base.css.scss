@@ -170,7 +170,7 @@ ol { margin-#{$defaultFloat}: 20px;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 90.5rem;
+  max-width: 60.5rem;
 }
 
 .row:after {
@@ -363,6 +363,20 @@ nav h1 {
   left:-9999rem;
 }
 
+
+
+
+
+// Hanging Indent
+
+ul {
+    list-style: disc outside none; 
+    margin-left: 0; 
+    padding-left: 1rem;
+}
+li {
+    padding-left: 0.25rem;
+}
 
 /*
  * Print styles.
