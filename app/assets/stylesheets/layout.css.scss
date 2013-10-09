@@ -93,13 +93,13 @@ header {
     }
     &:last-child {
       background:$secondaryColor;
-      img {
-        width: 100%;
-        max-width: 22rem;
-        display: block;
-        margin:0 auto;
-        @media screen and (min-width: 515px) {
-          // margin:-4rem auto 1rem;
+      .image {
+        img {
+          width: 100%;
+          text-align:center;
+          max-width: 25rem;
+          display: block;
+          margin:0 auto;
         }
       }
       h2 {
@@ -108,7 +108,8 @@ header {
       }
       p, h2, h3 {
         color: white;
-        text-align: center;
+        display: inline-block;
+        width: 100%;
       }
       .button {
         display: block;
@@ -130,19 +131,27 @@ header {
         }
       }
       &:last-child {
-        img {
+        .image {
           float: left;
-          margin-right: 2.5rem;
+          width: 50%;
+          img {
+            width: 100%;
+            margin:0 auto;
+          }
         }
-        h2 {
-          margin-top: 2rem;
-        }
-        p, h2, h3 {
-          text-align: left;
-        }
-        .button {
-          display: inline-block;
-          padding:1rem 4rem;
+        .content {
+          float: right;
+          width: 48%;
+          padding-left: 1rem;
+          h2 {
+            margin-top: 4.5rem;
+          }
+          p, h2, h3 {
+          }
+          .button {
+            display: inline-block;
+            padding:1rem 4rem;
+          }
         }
       }
     }  

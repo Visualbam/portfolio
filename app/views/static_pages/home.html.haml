@@ -3,12 +3,14 @@
     .row
       %h1 Front End Web Developer &amp; Designer
       %p
-        I am located in Pittsburgh, PA currently learning Ruby on Rails. I have experience in most current frameworks including bootstrap, foundation and the semantic grid system.
+        I am located in Pittsburgh, PA currently learning Ruby on Rails. I have experience in most current frameworks including bootstrap, foundation and the semantic grid system. I feel obligated to stay up-to-date on ALL of the latest design and development trends on the internet to effectively keep my projects fresh and future proof. My goal is to be an asset to you or your company and wear multiple hats to help streamline projects.
       = link_to "Hire me today", contact_path, {:class => "button depth"}
   %section
     .row
-      = image_tag("center.png")
-      %h2 Development &amp; Design
-      %p 
-        Coming from a design background with development experience I excel in user interface design and current web trends. I am located in Pittsburgh, PA currently learning Ruby on Rails. I have experience in most current frameworks.
-      = link_to "I'm your next asset", contact_path, {:class => "button depth"}
+      .image
+        = image_tag("center.png")
+      .content
+        %h2 Development &amp; Design
+        %p 
+          Coming from a design background with development experience I excel in user interface design and current web trends. I am located in Pittsburgh, PA currently learning Ruby on Rails. I have experience in most current frameworks.
+        = link_to "I'm your next asset", contact_path, {:class => "button depth"}
