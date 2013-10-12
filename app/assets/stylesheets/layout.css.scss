@@ -120,7 +120,7 @@ header {
             float: left;
             display: inline-block;
             margin-right: 5%;
-            @media screen and (min-width: 570px) { position:relative; left:5%; }
+            @media screen and (min-width: 570px) { position:relative; left:2%; }
           }
           p {
             width: 75%;
@@ -178,14 +178,13 @@ header {
             width: 31.5%;   
             display: inline-block;
             img {
-              width: 30%;
+              width: 22%;
               max-width: 6rem;
               float: left;
               display: inline-block;
-              margin-right: 10%;
             }
             p {
-              width: 60%;
+              width: 72%;
               float: right;
               font-size: 1rem;
               display: inline-block;
@@ -206,10 +205,87 @@ header {
   }
 }
         
+// Resume
+#resume {
+  section {
+    &:last-child {
+      .row {
+        div {
+          padding:0.85rem;
+          border:1px solid #efefef;
+          &:hover {
+            background:$lightGrey;
+          }
+          h2 {
+            font-size: 1.25rem;
+            margin:0;
+          }
+          h3 {
+            margin: 0.25rem 0 0;
+            font-size: 0.85rem;
+            color: $grey;
+          }
+          span {
+            font-size: 0.85rem;
+            color: $grey;
+          }
+          ul {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            li {
+              margin:0.25rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      &:last-child {
+        .row {
+          div {
+            width: 50%;
+            float: left;
+            min-height: 15rem;
+          }
+        }
+      }
+    } 
+  }
+}
 
-.current {
-  color:red!important;
-  background:lightblue;
+// Portfolio
+#portfolio {
+  section {
+    p {
+      font-size: 1.25rem;
+    }
+    &:last-child {
+      .row {
+        div {
+          width: 100%;
+          padding:0.5rem;
+        }
+      }  
+    }
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      p {
+        font-size: 1.75rem;
+      }
+      &:last-child {
+        .row {
+          div {
+            width: 33%;
+            float: left;
+            padding:0.5rem;
+          }
+        }  
+      }
+    }
+  }
 }
 
 // Footer
