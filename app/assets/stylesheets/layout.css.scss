@@ -28,6 +28,9 @@
 // Navigation
 header {
   height: $headerHeight;
+  .row {
+    padding: 1rem;
+  }
   nav {
     height: $headerHeight;
     a {
@@ -36,7 +39,7 @@ header {
       float: left;
       img {
         width: 18rem;
-        margin-bottom:1rem;;
+        margin-bottom:0.5rem;
       }
     }
     ul {
@@ -96,6 +99,9 @@ header {
         color: white;
         display: inline-block;
         width: 100%;
+      }
+      p {
+        color: lighten($secondaryColor, 40%);
       }
       .button {
         display: block;
@@ -208,6 +214,42 @@ header {
 // Resume
 #resume {
   section {
+    &:first-child {
+      background:$secondaryColor;
+      color: lighten($secondaryColor, 40%);
+      h1, h2 {
+        color: white;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      a {
+        font-size: 1.25rem;
+      }
+      .button {
+        display: block;
+        font-size:1.5rem;
+        text-shadow: 0 2px darken($primaryColor, 15%);
+      }
+      div {
+        &:first-child {
+          margin-bottom: 1.5rem;
+        }
+        &:last-child {
+          .image {
+            width: 12rem;
+            margin: 1rem auto 2rem;
+            border-radius: 100%;
+            overflow: hidden;
+            border:0.5rem solid white;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
     &:last-child {
       .row {
         div {
@@ -242,6 +284,36 @@ header {
   }
   @media screen and (min-width: 768px) {
     section {
+      &:first-child {
+        h1 {
+          display:block;
+        }
+        span {
+          font-size: 1.25rem;
+          float: right;
+          padding:1.75rem 0;
+        }
+        div {
+          @include clearfix;
+          &:last-child {
+            .information {
+              float: right;
+              width: 72%;
+              padding-top:1rem;
+            } 
+            .image {
+              float: left;
+              margin: 4% 0 0 0;
+              width: 22%;
+            }
+          }
+        }
+        .button {
+          display: inline-block;
+          font-size:1.5rem;
+          text-shadow: 0 2px darken($primaryColor, 15%);
+        }
+      }
       &:last-child {
         .row {
           div {
