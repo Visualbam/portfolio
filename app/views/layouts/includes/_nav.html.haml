@@ -1,15 +1,15 @@
 %header
-  %nav
-    %ul
-      %li
-        = link_to "Resume", resume_path
-      %li
-        = link_to "Work", portfolio_path
-      %li
-        = link_to "Blog", articles_path
-      %li
-        = link_to "Connect", contact_path
-    %a#pull{:href => "#"} Menu
-    = link_to(image_tag("logo-simple.svg", :alt => "Bruce McElroy | visualbam", :rel => "logo"), root_path)
-    %h1 Bruce McElroy
-    .colorBar
+  .row
+    %nav
+      = link_to(image_tag("logo.svg", :alt => "Bruce McElroy Logo", :rel => "logo"), root_path)
+      %ul
+        %li
+          = link_to  "Resume", resume_path, {:title => "Resume"}
+        %li
+          = link_to "Portfolio", portfolio_path, {:title => "Portfolio"}
+        -#
+          %li
+            = link_to "Blog", articles_path, {:title => "Blog"}
+        %li
+          = link_to "Connect", contact_path, {:title => "Contact"}
+     

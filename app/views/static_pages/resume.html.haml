@@ -1,60 +1,70 @@
-#resumepage
-  %section#summary
-    .row{:style => 'padding-bottom:0.25rem;'}
-      %h1 Summary
-      %p
-        I am a front end developer by day... and a front end developer by night. My profession is my passion and way of life. I do not consider what I do a job. I continue working on personal projects after my normal work day. I strive to be challenged and am very self motivated. I am currently learning Ruby on Rails and have experience in most current frameworks including bootstrap, foundation and the semantic grid system. I feel obligated to stay up-to-date on ALL of the latest design and development trends on the internet to effectively keep my projects fresh and future proof. My goal is to be an asset to your company and wear multiple hats and help streamline projects.
-      %h4{:style => 'margin-bottom:0.5rem;'}
-        Skills and Qualifications
-      %ul
-        %li Understanding of mobile development with a focus on responsive web design and mobile first approach.
-        %li Excellent understanding of designing user experiences and interfaces with a passion for usability and accessibility.
-        %li Mastery of the Photoshop, Illustrator and Indesign as well as typography.
-        %li Proficient with latest W3C standards, HTML5 and CSS3.
-        %li Jr. Ruby on Rails skillsets working with Ruby 1.93 and Rails 3. Also experience using Ruby 2 and Rails 4.
-        %li Working experience using Foundation, Bootstrap and The Semantic Grid System.
-  %section#experience
+#resume
+  %section
     .row
-      %h1 Experience
-      .job
-        %h5 Front End Web Developer
-        %h6 PPG Industries
-        %p August 2012 – Present (1 year 1 month) | Pittsburgh Area
+      %div
+        .image
+          = image_tag("me.jpg")
+        .information
+          %h1
+            Bruce McElroy
+          %h2
+            Front End Web Designer
+          %p
+            I am a front end developer by day... and a front end developer by night. My profession is my passion and way of life. I do not consider what I do a job. I continue working on personal projects after my normal work day. I strive to be challenged and am very self motivated. My goal is to be an asset to your company and wear multiple hats and help streamline projects.
+          %a{href: "https://docs.google.com/file/d/0B5QFoIcx46DVWlhfdGFGb0x5cm8/edit?usp=sharing", :class => "button depth", :target => "_blank"}
+            %i.icon-cloud-download
+            Download my resume
+        
+  %section
+    .row
+      %div
+        %h2 Front End Web Designer
+        %h3 @ PPG Industries
+        %span August 2012 – Pittsburgh Area
         %ul
-          %li Update and maintain corporate websites while maintaining brand/identity consistency
-          %li Web development using Visualstudio in a .NET/Azure environment
+          %li Update and maintain corporate websites
+          %li Web development using Visualstudio .NET/Azure
           %li Email marketing, design and development (responsive)
-          %li Project management using Sharepoint (currently transitioning to atTask)
-      .job
-        %h5 Front End Web Developer
-        %h6 Machovy.com
-        %p August 2012 – Present (1 year 1 month) | Pittsburgh PA
+          %li Project management using Sharepoint/atTask
+      %div
+        %h2 Front End Web Designer
+        %h3 @ Machovy.com
+        %span August 2012 – Present | Pittsburgh PA
         %ul
           %li Brand Development and identity
           %li Website traffic growth and marketing
           %li Wireframe and content
           %li Website UI/Design
-      .job
-        %h5 Front End Web Developer / Graphic Designer
-        %h6 Kolano Design
-        %p August 2011 – August 2012 (1 year 1 month) | Pittsburgh Area
+      %div
+        %h2 Front End Web Developer / Graphic Designer
+        %h3 @ Kolano Design
+        %span August 2011 – August 2012 | Pittsburgh Area
         %ul
-          %li Designed print material: Billboards, Magazine Ads, Collateral, direct mailers and Newsletters
+          %li Designed print material &amp; collateral
           %li Wordpress website development / technical support
           %li Signage Design
           %li Photography
-      .job
-        %h5 Graphic Design Intern
-        %h6 Whirl Magazine
-        %p April 2011 – July 2011 (4 months) | Pittsburgh Area
+      %div
+        %h2 Graphic Design Intern
+        %h3 @ Whirl Magazine
+        %span April 2011 – July 2011 | Pittsburgh Area
         %ul
           %li Designed magazine ads and 16 page spread for Pittsburgh's 50 Finest event
           %li Maintained WHIRL.com articles via wordpress
-      .job
-        %h5 Visual Communications Assistant
-        %h6 Pittsburgh Technical Institute
-        %p March 2010 – July 2011 (1 year 5 months) | Oakdale PA
+      %div
+        %h2 Visual Communications Assistant
+        %h3 @ Pittsburgh Technical Institute
+        %span March 2010 – July 2011 | Oakdale PA
         %ul
           %li Designed posters, displays and signage for student activities
           %li Created certificates, produced event directories and photographed school events
+      / %h4
+      /   Skills and Qualifications
+      / %ul
+      /   %li Understanding of mobile development with a focus on responsive web design and mobile first approach.
+      /   %li Excellent understanding of designing user experiences and interfaces with a passion for usability and accessibility.
+      /   %li Mastery of the Photoshop, Illustrator and Indesign as well as typography.
+      /   %li Proficient with latest W3C standards, HTML5 and CSS3.
+      /   %li Jr. Ruby on Rails skillsets working with Ruby 1.93 and Rails 3. Also experience using Ruby 2 and Rails 4.
+      /   %li Working experience using Foundation, Bootstrap and The Semantic Grid System.
 

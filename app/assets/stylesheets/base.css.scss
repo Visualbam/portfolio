@@ -1,9 +1,9 @@
 @import "globals/all";
 @import "compass/css3";
 
-/* Global Reset & Standards ---------------------- */
+// Global Reset & Standards
 *, *:before, *:after { @include box-sizing(border-box); }
-html { font-size: 100%; }
+html { font-size: 16px; }
 body { margin: 0; padding: 0; background: $white; line-height: 1; color: $bodyFontColor; position: relative;  }
 
 @media only screen and (min-width: 48rem) {
@@ -19,14 +19,14 @@ body { margin: 0; padding: 0; background: $white; line-height: 1; color: $bodyFo
     outline: 0;
 }
 
-/* Links ---------------------- */
+// Links
 a img { border:none; }
-a { color: $mainColor; text-decoration: none; line-height: inherit; }
-a:hover { color: darken($mainColor, 5%); transition: all 0.2s ease-in-out; }
-a:focus { color: darken($mainColor, 5%); }
+a { color: $primaryColor; text-decoration: none!important; line-height: inherit; }
+a:hover { color: darken($primaryColor, 5%); transition: all 0.2s ease-in-out; }
+a:focus { color: darken($primaryColor, 5%); }
 p a, p a:visited { line-height: inherit; }
 
-/* Misc ---------------------- */
+// Misc
 .left        { float: left; }
 .right       { float: right; }
 .text-left   { text-align: left; }
@@ -36,7 +36,7 @@ p a, p a:visited { line-height: inherit; }
 .hide-override { display: none !important; }
 .highlight   { background: $highlightColor; }
 
-/* Reset for strange margins by default on <figure> elrements */
+// Reset for strange margins by default on <figure> elrements
 figure { margin: 0; }
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
@@ -78,8 +78,7 @@ strong, b { font-weight: bold; line-height: inherit; }
 small { font-size: 60%; line-height: inherit; }
 code { font-weight: bold; background: $highlightColor; }
 
-/* Lists ---------------------- */
-
+// Lists
 ul, ol, dl { font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rrem; list-style-position: outside; padding-left:1rrem; }
 ul {
   li {
@@ -162,8 +161,8 @@ ol { margin-#{$defaultFloat}: 20px;
 }
 
 
-/* Grid ---------------------- */
-.row, footer {
+// Grid
+.row {
   margin:0 1.04167%;
   padding:1.5rem;
   width:100%;
@@ -171,20 +170,53 @@ ol { margin-#{$defaultFloat}: 20px;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 90.5rem;
+  max-width: 75rem;
 }
 
-.row:after, footer:after {
+.row:after {
     clear: both;
-    content: ".";
+    content: " ";
     display: table;
     height: 0;
     visibility: hidden;
 }
 
 
+// buttons
+.button {
+  color: #FFFFFF; 
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
 
-/* Blockquotes ---------------------- */
+// Button Depth
+.depth {
+  background-color: $primaryColor;
+  border-bottom: 0.35rem solid darken($primaryColor, 20%);   
+  &:hover {
+    background-color: lighten($primaryColor, 10%); 
+    color:white;
+  }
+  &:active {
+    border-bottom: 0; 
+    margin-top: 1rem;
+  }
+}
+.flat {
+  background-color: $primaryColor;
+  &:hover {
+    background-color: lighten($primaryColor, 10%); 
+    color:white;
+  }
+}
+
+
+
+// Blockquotes
 blockquote, blockquote p { line-height: 1.5; color: lighten($headerFontColor, 30%); }
 blockquote { margin: 0 0 1.25rem; padding: 9px 20px 0 19px; border-#{$defaultFloat}: 1px solid #ddd;
   cite { display: block; font-size: 1rem - 1; color: lighten($headerFontColor, 20%);
@@ -197,7 +229,7 @@ abbr, acronym { text-transform: uppercase; font-size: 90%; color: $headerFontCol
 abbr { text-transform: none; }
 
 
-/* Tooltips ---------------------- */
+// Tooltips
 .has-tip { border-bottom: $hasTipBorderBottom; cursor: help; font-weight: $hasTipFontWeight; color: $hasTipFontColor;
 
   &:hover, &:focus { border-bottom: $hasTipBorderBottomHover; color: $hasTipFontColorHover; }
@@ -221,9 +253,9 @@ abbr { text-transform: none; }
 
 }
 
-/* Alerts ---------------------- */
+// Alerts
 
-div.alert-box { display: block; padding: 6px 7px 7px; font-weight: bold; font-size: ms(0); color: $white; background-color: $mainColor; border: 1px solid rgba(#000,.1); margin-bottom: 12px; @include border-radius(3px); text-shadow: 0 -1px rgba(#000,.3); position: relative;
+div.alert-box { display: block; padding: 6px 7px 7px; font-weight: bold; font-size: ms(0); color: $white; background-color: $primaryColor; border: 1px solid rgba(#000,.1); margin-bottom: 12px; @include border-radius(3px); text-shadow: 0 -1px rgba(#000,.3); position: relative;
 
   &.success { background-color: $successColor; color: #fff; text-shadow: 0 -1px rgba(#000,.3); }
   &.alert { background-color: $alertColor; color: #fff; text-shadow: 0 -1px rgba(#000,.3); }
@@ -235,7 +267,7 @@ div.alert-box { display: block; padding: 6px 7px 7px; font-weight: bold; font-si
 }
 
 
-/* Inline Link List */
+// Inline Link List
 ul.inline-list, ul.link-list { margin: 0 0 $linkListBottomMargin; padding: 0; list-style: none; overflow: hidden;
 
   & > li { list-style: none; float: $defaultFloat; margin-#{$defaultFloat}: 22px; display: block;
@@ -244,7 +276,7 @@ ul.inline-list, ul.link-list { margin: 0 0 $linkListBottomMargin; padding: 0; li
   }
 }
 
-/* Panels ---------------------- */
+// Panels
 @mixin panel() {
   background: darken($white, 5%);
   border: solid 1px darken($white, 10%);
@@ -263,9 +295,9 @@ ul.inline-list, ul.link-list { margin: 0 0 $linkListBottomMargin; padding: 0; li
   &>:first-child { margin-top: 0; }
   &>:last-child { margin-bottom: 0; }
 
-  &.callout { background: $mainColor; color: #fff; border-color: darken($mainColor, 10%); @include box-shadow(inset 0px 1px 0px rgba(255,255,255,0.5));
+  &.callout { background: $primaryColor; color: #fff; border-color: darken($primaryColor, 10%); @include box-shadow(inset 0px 1px 0px rgba(255,255,255,0.5));
     a { color: #fff; }
-    .button { background: $white; border: none; color: $mainColor; @include text-shadow(none);
+    .button { background: $white; border: none; color: $primaryColor; @include text-shadow(none);
 
       &:hover, &:focus { background: rgba(255,255,255,0.8); }
     }
@@ -275,7 +307,7 @@ ul.inline-list, ul.link-list { margin: 0 0 $linkListBottomMargin; padding: 0; li
 
 }
 
-/* Video - Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/ ---------------------- */
+// Video - Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
 .flex-video {
   position: relative;
   padding-top: 25px;
@@ -292,7 +324,7 @@ ul.inline-list, ul.link-list { margin: 0 0 $linkListBottomMargin; padding: 0; li
 
 
 
-/* Tables ---------------------- */
+// Tables
 table { background: #fff; @include border-radius($tableBorderRadius); margin: 0 0 18px; border: 1px solid #ddd;  }
 
 table thead, table tfoot { background: #f5f5f5; }
@@ -313,7 +345,7 @@ table tbody tr td { color: #333; padding: 9px 10px; vertical-align: top; border:
 
 
 
-/* Input ---------------------- */
+// Input
 ::-webkit-input-placeholder {
    font-weight: normal;
 }
@@ -331,6 +363,20 @@ nav h1 {
   left:-9999rem;
 }
 
+
+
+
+
+// Hanging Indent
+
+ul {
+    list-style: disc outside none; 
+    margin-left: 0; 
+    padding-left: 1rem;
+}
+li {
+    padding-left: 0.25rem;
+}
 
 /*
  * Print styles.
