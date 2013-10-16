@@ -18,3 +18,6 @@
 //= require articles
 //= require turbolinks
 //= require stickyFooter
+//= require scripts.js
+//= require scrollTo.js
+
