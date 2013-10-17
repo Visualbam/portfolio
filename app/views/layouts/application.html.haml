@@ -7,6 +7,10 @@
     %link{href: "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css", rel: "stylesheet"}/
     %link{href: "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css", rel: "stylesheet"}/
     = stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag :modernizr
+    <!--[if lte IE 8]>
+    = javascript_include_tag "selectivizr"
+    <![endif]-->
     = csrf_meta_tags
     - if Rails.env.production?
       :javascript
@@ -18,9 +22,9 @@
         ga('create', '#{GOOGLE_TA}', 'visualbam.com');
         ga('send', 'pageview');
   %body
-    = render 'layouts/includes/nav'
+    = render "layouts/includes/nav"
     = yield
-    = render 'layouts/includes/footer'
+    = render "layouts/includes/footer"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     :javascript
       jQuery("body").prepend('<div class="spinner"></div>');

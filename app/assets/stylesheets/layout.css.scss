@@ -111,28 +111,6 @@ header {
       }
     }
     &:nth-child(2) {
-      background:darken($secondaryColor, 5%);
-      padding: 1rem 0;
-      display: none;
-      label {
-        color: darken($secondaryColor, 15%);
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-      input, textarea {
-        display: block;
-        width: 100%;
-        background:lighten($secondaryColor, 5%);
-        border:none;
-        color: white;
-        margin-bottom: 1.5rem;
-        &:focus {border:none; box-shadow:none;}
-      }
-      textarea {
-        min-height: 10rem;
-      }
-    }
-    &:nth-child(3) {
       .row {
         div {
           @include clearfix;
@@ -197,7 +175,7 @@ header {
           }
         }
       }
-      &:nth-child(3) {
+      &:nth-child(2) {
         .row {
           div {
             &:nth-child(2) {
