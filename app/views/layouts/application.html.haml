@@ -9,7 +9,7 @@
     = stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag :modernizr
     <!--[if lte IE 8]>
-    = javascript_include_tag "selectivizr"
+    = javascript_include_tag :selectivizr
     <![endif]-->
     = csrf_meta_tags
     - if Rails.env.production?

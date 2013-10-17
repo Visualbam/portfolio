@@ -14,7 +14,7 @@ Portfolio::Application.configure do
   config.action_controller.perform_caching = true
 
   # Limits amount of time content is cached
-  config.static_cache_control = "public, max-age=3600"
+  config.static_cache_control = "public, max-age=604800"
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
