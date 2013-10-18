@@ -8,9 +8,6 @@
     %link{href: "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css", rel: "stylesheet"}/
     = stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag :modernizr
-    <!--[if lte IE 8]>
-    = javascript_include_tag :selectivizr
-    <![endif]-->
     = csrf_meta_tags
     - if Rails.env.production?
       :javascript
@@ -26,6 +23,9 @@
     = yield
     = render "layouts/includes/footer"
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    <!--[if lte IE 8]>
+    = javascript_include_tag :selectivizr
+    <![endif]-->
     :javascript
       jQuery("body").prepend('<div class="spinner"></div>');
       jQuery(document).ready(function() {
