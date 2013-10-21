@@ -250,6 +250,8 @@ header {
             overflow: hidden;
             border: 1rem solid rgb(255, 255, 255);
             border: 1rem solid rgba(255, 255, 255, .05);
+            -webkit-background-clip: padding-box; /* for Safari */
+            background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
             img {
               width: 100%;
             }
