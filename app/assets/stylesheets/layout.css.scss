@@ -212,7 +212,7 @@ header {
 }
         
 // Resume
-#resume {
+#resume, #portfolio {
   section {
     &:first-child {
       background:$secondaryColor;
@@ -330,9 +330,6 @@ header {
 // Portfolio
 #portfolio {
   section {
-    p {
-      font-size: 1.25rem;
-    }
     &:last-child {
       .row {
         div {
@@ -344,9 +341,6 @@ header {
   }
   @media screen and (min-width: 768px) {
     section {
-      p {
-        font-size: 1.75rem;
-      }
       &:last-child {
         .row {
           div {
