@@ -103,6 +103,9 @@ header {
         display: inline-block;
         width: 100%;
       }
+      h3 {
+        font-size: 1.35rem;
+      }
       p {
         color: lighten($secondaryColor, 40%);
       }
