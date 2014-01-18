@@ -24,7 +24,7 @@ group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'haml'
-  gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+  gem 'compass-rails'
   gem 'activerecord'
   gem 'carrierwave'
   gem 'mini_magick'
