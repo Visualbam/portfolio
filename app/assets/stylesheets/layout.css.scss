@@ -219,6 +219,9 @@ header {
         
 // Resume
 #resume, #portfolio {
+  .images a {
+    pointer-events: none;
+  }
   section {
     &:first-child {
       background:$secondaryColor;
