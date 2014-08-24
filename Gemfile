@@ -1,51 +1,53 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.beta1'
-ruby '1.9.3'
+gem 'rails', '4.0.4'
 
-group :production do
-  gem 'pg'
-  gem 'haml'
-  gem 'rails_12factor'
-end        
+# Use postgresql as the database for Active Record
+gem 'pg'
 
-group :development, :test do
-  # gem 'sqlite3'
-  gem 'pg'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.2'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'normalize-rails'
-  gem 'sass-rails',   '~> 4.0.0.beta1'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
-  gem 'haml'
-  gem 'compass-rails'
-  gem 'activerecord'
-  gem 'carrierwave'
-  gem 'mini_magick'
-  gem "fog", "~> 1.3.1"
-  gem 'modernizr-rails'
-  gem 'selectivizr-rails'
-  
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 
-  gem 'uglifier', '>= 1.0.3'
-end
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
 
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
+
+# Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'simple_form'
-gem 'ckeditor_rails'
-gem 'mail_form'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# Foundation 
+gem 'foundation-rails'
+
+# Ember
+gem 'ember-rails'
+gem 'ember-source'
+gem 'emblem-rails'
+
+gem 'ffaker'
+gem 'puma'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.0.1'
+gem 'jbuilder', '~> 1.2'
 
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
+
+# Use debugger
+# gem 'debugger', group: [:development, :test]
