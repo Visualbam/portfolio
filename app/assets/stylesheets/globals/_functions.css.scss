@@ -1,4 +1,0 @@
-@function emCalc($pxWidth) {
-  @return ($pxWidth / $emBase) + em;
-}
-
