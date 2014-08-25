@@ -2,5 +2,10 @@
 // The result of the model function is then available to the controller, view, and template.
 
 App.CompaniesRoute = Ember.Route.extend({
-  model: function() { return this.store.find('company') }
+  model: function() {
+    return this.store.find('company')
+  },
+  afterModel: function(companies, transition) {
+    this.transitionTo('company', companies.get('firstObject'));
+  }
 });
