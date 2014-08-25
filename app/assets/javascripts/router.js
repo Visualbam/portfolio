@@ -8,6 +8,9 @@ App.Router.reopen({
 
 App.Router.map(function() {
   this.resource('companies', { path: '/resume' }, function() {
-    this.resource('company', { path: '/:id' });
+    this.resource('company', { path: '/:id' }, function(){
+      // This route is going to look for a LeadEdit controller, view, and template.
+      this.route('edit')
+    });
   });
 });
