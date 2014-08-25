@@ -785,7 +785,7 @@ $secondary-color: #444445;
 
 // We use these to style the label text
 // $label-font-sizing: rem-calc(11);
-// $label-font-weight: $font-weight-normal;
+$label-font-weight: bold;
 // $label-font-color: $oil;
 // $label-font-color-alt: $white;
 // $label-font-family: $body-font-family;
@@ -1368,7 +1368,7 @@ $topbar-bg-color: white;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: 75px;
+$topbar-height: 70px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1390,7 +1390,7 @@ $topbar-link-color: $secondary-color;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
 $topbar-link-weight: bold;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-font-size: rem-calc(14);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: $charcoal;

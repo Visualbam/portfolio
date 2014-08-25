@@ -9,6 +9,21 @@
   padding: 2rem 0 3rem;
 }
 
+.ember-text-area {
+  min-height: 100px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.supporticons {
+  img {
+    margin-bottom: 1rem;
+    width: 25%;
+  }
+}
+
 .new-company {
   margin: 0;
 }
@@ -66,7 +81,7 @@
     p {
       border-top: 1px solid lighten(lightgray, 10%);
       color: darken(lightgray, 10%);
-      padding-top: 2rem;
+      padding-top: 1rem;
     }
     span {
       color: darken($primary-color, 20%);

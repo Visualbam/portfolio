@@ -6,9 +6,9 @@
       li.toggle-topbar.menu-icon: a: span Menu
     section.top-bar-section
       ul.right
-        li: a Portfolio
+        li= link-to "index" | Home
         li= link-to "companies" | Resume
-        li: a Contact
+        li: a Portfolio
 .main: .row: .columns.large-12: = outlet
 footer: .row: .columns.large-12
   p &copy; 2014 Bruce McElroy

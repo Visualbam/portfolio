@@ -18,6 +18,6 @@
       dt: label Location:
       dd: view Ember.TextField value=fields.location
 
-    fieldset.actions
+    .actions
       input.button type='submit' value='Create Lead' click="createLead"
       a.cancel.button href="#" click="cancel" Cancel

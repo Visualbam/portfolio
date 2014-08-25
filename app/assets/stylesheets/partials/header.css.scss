@@ -6,3 +6,7 @@
 .right li .active {
   color: $primary-color;
 }
+
+ul li a {
+  transition: all 0.25s ease-in-out;
+}
