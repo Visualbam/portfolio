@@ -1,6 +1,7 @@
 article#lead
   h1 New Lead
-
+  if showError
+    .error Must have Company Name and Job Title
   form
     fieldset
       dl
