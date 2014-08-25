@@ -1,15 +1,86 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- //= require foundation_and_overrides
+@import "foundation_and_overrides";
 
- *= require_tree .
- */
+// Partials
+@import "partials/header";
+
+
+.main {
+  background: $silver;
+  padding: 2rem 0 3rem;
+}
+
+.new-company {
+  margin: 0;
+}
+
+.jobs {
+  display: flex;
+  height: auto;
+  h1 {
+    color: $primary-color;
+  }
+  .list {
+    background: darken($silver, 75%);
+    margin: 0;
+    width: 25%;
+    li {
+      border-bottom: 1px solid darken($silver, 80%);
+      color: darken($silver, 20%);
+      cursor: pointer;
+      display: block;
+      margin-bottom: 0;
+      padding: 1.25rem;
+      text-align: left;
+      transition: all 200ms ease-in-out;
+      width: 100%;
+      line-height: 1.25;
+      span {
+        color: darken($silver, 50%);
+        display: block;
+        font-weight: bold;
+        font-size: rem-calc(12);
+        transition: all 200ms ease-in-out;
+      }
+      &:hover, &.active {
+        background: darken($silver, 80%);
+        color: $primary-color;
+        span {
+          color: lighten($primary-color, 20%);
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .description {
+    background: white;
+    min-height: 240px;
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    position: relative;
+    width: 75%;
+    h3 {
+      color: $primary-color;
+      margin: 0;
+    }
+    p {
+      border-top: 1px solid lighten(lightgray, 10%);
+      color: darken(lightgray, 10%);
+      padding-top: 2rem;
+    }
+    span {
+      color: darken($primary-color, 20%);
+      display: block;
+      font-size: rem-calc(12);
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+
+footer {
+  background: white;
+  padding-top: 1rem;
+}

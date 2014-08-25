@@ -2,11 +2,13 @@
   nav.top-bar role="navigation" data-topbar=""
     ul.title-area
       li.name
-        h1= link-to "index" | Visualbam
+        h1= link-to "index": img src="http://visualbam.com/assets/logo-6814ed49a10036dc5045fcded8db5acb.svg" alt="Logo"
       li.toggle-topbar.menu-icon: a: span Menu
     section.top-bar-section
       ul.right
-        li= link-to "companies" | Resume
         li: a Portfolio
+        li= link-to "companies" | Resume
         li: a Contact
-.row: .columns.large-12: = outlet
+.main: .row: .columns.large-12: = outlet
+footer: .row: .columns.large-12
+  p &copy; 2014 Bruce McElroy

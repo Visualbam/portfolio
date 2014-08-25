@@ -1,18 +1,11 @@
 // The single quote ' leaves a trailing whitespace after the line.
 outlet
 unless isEditing
-  article#company
-    h1= model.companyName
-    link-to 'edit' 'company.edit' model classNames='edit'
+  .description
+    h3= model.companyName
+    span= model.dateLocation
     p
-      ' Job Title:
-      model.jobTitle
-    p
-      ' Job Description:
       model.jobDescription
-    p
-      ' Date / Location:
-      model.dateLocation
-    p
-      a.delete href='#' click="delete" delete
-      input type='submit' value='Save Changes' click="saveChanges"
+    link-to 'Edit' 'company.edit' model classNames='edit button'
+    input.button type='submit' value='Save Changes' click="saveChanges"
+    a.delete.button href='#' click="delete" Delete

@@ -1,25 +1,23 @@
-article#lead
-  h1 New Lead
+.description
   if showError
     .error Must have Company Name and Job Title
   form
-    fieldset
-      dl
-        dt: label Company Name:
-        dd: view Ember.TextField value=fields.companyName
-      dl
-        dt: label Job Title:
-        dd: view Ember.TextField value=fields.jobTitle
-      dl
-        dt: label Job Description:
-        dd: view Ember.TextField value=fields.jobDescription
-      dl
-        dt: label Date:
-        dd: view Ember.TextField value=fields.date
-      dl
-        dt: label Location:
-        dd: view Ember.TextField value=fields.location
+    dl
+      dt: label Company Name:
+      dd: view Ember.TextField value=fields.companyName
+    dl
+      dt: label Job Title:
+      dd: view Ember.TextField value=fields.jobTitle
+    dl
+      dt: label Job Description:
+      dd: view Ember.TextField value=fields.jobDescription
+    dl
+      dt: label Date:
+      dd: view Ember.TextField value=fields.date
+    dl
+      dt: label Location:
+      dd: view Ember.TextField value=fields.location
 
     fieldset.actions
-      input type='submit' value='Create Lead' click="createLead"
-      a.cancel href="#" click="cancel" cancel
+      input.button type='submit' value='Create Lead' click="createLead"
+      a.cancel.button href="#" click="cancel" Cancel

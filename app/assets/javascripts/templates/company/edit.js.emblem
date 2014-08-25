@@ -1,24 +1,23 @@
-article#lead
+.description
   form
-    fieldset
-      dl
-        dt: label Company Name:
-        dd: view Ember.TextField value=model.companyName
-        // Ember gives you the Ember.TextField view which renders a text input. \
-        // Just assign value to the property you want to bind to.
-      dl
-        dt: label Job Title:
-        dd: view Ember.TextField value=model.jobTitle
-      dl
-        dt: label Job Description:
-        dd: view Ember.TextField value=model.jobDescription
-      dl
-        dt: label Date:
-        dd: view Ember.TextField value=model.date
-      dl
-        dt: label Location:
-        dd: view Ember.TextField value=model.location
+    dl
+      dt: label Company Name:
+      dd: view Ember.TextField value=model.companyName
+      // Ember gives you the Ember.TextField view which renders a text input. \
+      // Just assign value to the property you want to bind to.
+    dl
+      dt: label Job Title:
+      dd: view Ember.TextField value=model.jobTitle
+    dl
+      dt: label Job Description:
+      dd: view Ember.TextArea value=model.jobDescription
+    dl
+      dt: label Date:
+      dd: view Ember.TextField value=model.date
+    dl
+      dt: label Location:
+      dd: view Ember.TextField value=model.location
 
-    fieldset.actions
-      input type='submit' value='Save Changes' click="saveChanges"
-      a.cancel href="#" click="cancel" cancel
+  fieldset.actions
+    input.button type='submit' value='Save Changes' click="saveChanges"
+    a.cancel.button href="#" click="cancel" cancel
