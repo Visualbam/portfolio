@@ -2,4 +2,5 @@ article#leads
   h1 Companies
   ul
     each company in controller
-      li= company.companyName
+      link-to 'company' company tagName="li" | #{company.companyName}
+= outlet

@@ -3,5 +3,9 @@ App.Company = DS.Model.extend({
   jobTitle: DS.attr('string'),
   jobDescription: DS.attr('string'),
   date: DS.attr('string'),
-  location: DS.attr('string')
+  location: DS.attr('string'),
+  
+  dateLocation: function() {
+    return this.get('date') + ' | ' + this.get('location')
+  }.property('date', 'location')
 });

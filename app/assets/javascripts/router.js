@@ -7,5 +7,7 @@ App.Router.reopen({
 });
 
 App.Router.map(function() {
-  this.resource('companies', { path: '/resume' });
+  this.resource('companies', { path: '/resume' }, function() {
+    this.resource('company', { path: '/:id' });
+  });
 });

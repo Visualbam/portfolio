@@ -1,0 +1,12 @@
+// The single quote ' leaves a trailing whitespace after the line.
+article#company
+  h1= model.companyName
+  p
+    ' Job Title:
+    model.jobTitle
+  p
+    ' Job Description:
+    model.jobDescription
+  p
+    ' Date / Location:
+    model.dateLocation
