@@ -1,5 +1,7 @@
-article#leads
-  h1 Companies
+article#companies
+  h1
+    | Companies
+    link-to 'companies.new' |  New Company
   ul
     each company in controller
       link-to 'company' company tagName="li" | #{company.companyName}

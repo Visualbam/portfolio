@@ -6,18 +6,18 @@ article#lead
         dd: view Ember.TextField value=model.companyName
         // Ember gives you the Ember.TextField view which renders a text input. \
         // Just assign value to the property you want to bind to.
-
       dl
         dt: label Job Title:
         dd: view Ember.TextField value=model.jobTitle
-
       dl
         dt: label Job Description:
         dd: view Ember.TextField value=model.jobDescription
-
       dl
-        dt: label Date / Location:
-        dd: view Ember.TextField value=model.dateLocation
+        dt: label Date:
+        dd: view Ember.TextField value=model.date
+      dl
+        dt: label Location:
+        dd: view Ember.TextField value=model.location
 
     fieldset.actions
       input type='submit' value='Save Changes' click="saveChanges"

@@ -13,3 +13,6 @@ unless isEditing
     p
       ' Date / Location:
       model.dateLocation
+    p
+      a.delete href='#' click="delete" delete
+      input type='submit' value='Save Changes' click="saveChanges"
