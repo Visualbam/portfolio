@@ -1,3 +1,19 @@
-h1 Hello world
-p test
-outlet
+.contain-to-grid
+  nav.top-bar role="navigation" data-topbar=""
+    ul.title-area
+      li.name
+        h1
+          a Visualbam
+      li.toggle-topbar.menu-icon
+        a
+          span Menu
+    section.top-bar-section
+      ul.right
+        li
+          a Resume
+        li
+          a Portfolio
+        li
+          a Contact
+section#main
+  = outlet
