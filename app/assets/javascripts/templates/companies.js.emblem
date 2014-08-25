@@ -1,0 +1,5 @@
+article#leads
+  h1 Companies
+  ul
+    each company in controller
+      li= company.companyName
