@@ -1,11 +1,12 @@
-article#companies
-  h2 Front End Web Developer & Designer
-  p I am located in Pittsburgh, PA currently learning Ruby on Rails and Ember.js. I have experience in most current frameworks including bootstrap, foundation and the semantic grid system
-  /link-to 'companies.new' classNames='button new-company' | Add your company to my resume
-  .jobs
-    ul.list
-      each company in controller
-        link-to 'company' company tagName="li"
-          company.companyName
-          span #{company.jobTitle}
-    = outlet
+section
+  .row: .large-12.columns
+    h2 Front End Web Developer & Designer
+    p I am located in Pittsburgh, PA currently learning Ruby on Rails and Ember.js. I have experience in most current frameworks including bootstrap, foundation and the semantic grid system
+    /link-to 'companies.new' classNames='button new-company' | Add your company to my resume
+    .jobs
+      ul.list
+        each company in controller
+          link-to 'company' company tagName="li"
+            company.companyName
+            span #{company.jobTitle}
+      = outlet

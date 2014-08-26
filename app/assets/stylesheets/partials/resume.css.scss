@@ -1,29 +1,3 @@
-@import "foundation_and_overrides";
-
-// Partials
-@import "partials/header";
-
-
-.main {
-  background: $silver;
-  padding: 2rem 0 3rem;
-}
-
-.ember-text-area {
-  min-height: 100px;
-}
-
-label {
-  font-weight: bold;
-}
-
-.supporticons {
-  img {
-    margin-bottom: 1rem;
-    width: 25%;
-  }
-}
-
 .new-company {
   margin: 0;
 }
@@ -92,10 +66,4 @@ label {
       margin-bottom: 1rem;
     }
   }
-}
-
-
-footer {
-  background: white;
-  padding-top: 1rem;
 }

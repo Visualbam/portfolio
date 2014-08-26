@@ -8,7 +8,7 @@
       ul.right
         li= link-to "index" | Home
         li= link-to "companies" | Resume
-        li: a Portfolio
-.main: .row: .columns.large-12: = outlet
+        li= link-to "portfolio" | Portfolio
+.main= outlet
 footer: .row: .columns.large-12
   p &copy; 2014 Bruce McElroy
