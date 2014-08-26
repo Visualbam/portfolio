@@ -1,0 +1,52 @@
+@import "foundation_and_overrides";
+
+// Partials
+@import "partials/header";
+@import "partials/footer";
+@import "partials/resume";
+
+
+.main {
+  background: $silver;
+  section {
+    padding: 2rem 0;
+  }
+}
+
+.supporticons {
+  img {
+    margin-bottom: 1rem;
+    width: 25%;
+  }
+}
+
+.intro {
+  background: $primary-color;
+  h2 {
+    font-weight: 100;
+    color: white;
+    line-height: 1.25;
+    span {
+      font-weight: bold;
+    }
+  }
+  p {
+    color: darken($primary-color, 30%);
+  }
+  .line {
+    border: 1px solid white;
+    margin-right: 1rem;
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+// Forms
+.ember-text-area {
+  min-height: 100px;
+}
+
+label {
+  font-weight: bold;
+}
