@@ -20,6 +20,23 @@
   }
 }
 
+section.support {
+  background: $secondary-color;
+  padding-top: 0;
+  .tabs {
+    display: flex;
+    li {
+      flex: 1;
+      display: block;
+      text-align: center;
+    }
+  }
+  .tab-title.active a:focus {
+    outline: none;
+  }
+}
+
+
 .intro {
   background: $primary-color;
   h2 {
@@ -37,7 +54,7 @@
     border: 1px solid white;
     margin-right: 1rem;
     &:hover {
-      border: none;
+      border: 1px solid $primary-color;
     }
   }
 }

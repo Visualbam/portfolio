@@ -16,53 +16,34 @@ section.support
   .row
     ul.tabs data-tab="" role="tablist"
       li.tab-title.active role="presentational"
-        a href="#panel2-1" role="tab" tabindex="0" aria-selected="false" controls="panel2-1" Tab 1
+        a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1" Design
       li.tab-title role="presentational"
-        a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" controls="panel2-2" Tab 2
+        a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" controls="panel2-2" Develope
       li.tab-title role="presentational"
-        a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3" Tab 3
-      .tabs-content
-        section.content.active role="tabpanel" aria-hidden="false" id="panel2-1"
-          h2 First Pane content
-        section.content.active role="tabpanel" aria-hidden="true" id="panel2-2"
-          h2 First Pane content
-        section.content.active role="tabpanel" aria-hidden="true" id="panel2-3"
-          h2 First Pane content
-    
-    <ul class="tabs" data-tab role="tablist">
-      <li class="tab-title active" role="presentational" ><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Tab 1</a></li>
-      <li class="tab-title" role="presentational" ><a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">Tab 2</a></li>
-      <li class="tab-title" role="presentational"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3">Tab 3</a></li>
-      <li class="tab-title" role="presentational" ><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" controls="panel2-4">Tab 4</a></li>
-    </ul>
-    <div class="tabs-content">
-      <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
-        <h2>First panel content goes here...</h2>
-      </section>
-      <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
-        <h2>Second panel content goes here...</h2>
-      </section>
-      <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
-        <h2>Third panel content goes here...</h2>
-      </section>
-      <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
-        <h2>Fourth panel content goes here...</h2>
-      </section>
-    </div>
-  
-  .row.text-center
-    .medium-4.large-4.columns.supporticons
-      a href="#"
-        img src="http://visualbam.com/assets/webdev-c20ecf32d6af0833e4aa3216769078b3.png"
-      h4 Web Design
-      p I create engaging mobile, tablet, and desktop experiences. This is how I spend my evenings.
-    .medium-4.large-4.columns.supporticons
-      a href="#"
-        img src="http://visualbam.com/assets/branding-716ef956471f9e2b13db803b7d0b34f8.png"
-      h4 Identity & Logo design
-      p A logo is just like a person. In a nutshell, what a logo means is more important than what it looks like.
-    .medium-4.large-4.columns.supporticons
-      a href="#"
-        img src="http://visualbam.com/assets/mobile-d8c4e235190b40675356a1450f6ffe10.png"
-      h4 Mobile First
-      p Developing and designing for mobile devices should start on your phone and end on your desktop.
+        a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3" UI/UX
+    .tabs-content
+      section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1"
+        h2 First Pane content
+      section role="tabpanel" aria-hidden="true" class="content" id="panel2-2"
+        h2 Second Pane content
+      section role="tabpanel" aria-hidden="true" class="content" id="panel2-3"
+        h2 Third Pane content
+
+
+
+  / .row.text-center
+  /   .medium-4.large-4.columns.supporticons
+  /     a href="#"
+  /       img src="http://visualbam.com/assets/webdev-c20ecf32d6af0833e4aa3216769078b3.png"
+  /     h4 Web Design
+  /     p I create engaging mobile, tablet, and desktop experiences. This is how I spend my evenings.
+  /   .medium-4.large-4.columns.supporticons
+  /     a href="#"
+  /       img src="http://visualbam.com/assets/branding-716ef956471f9e2b13db803b7d0b34f8.png"
+  /     h4 Identity & Logo design
+  /     p A logo is just like a person. In a nutshell, what a logo means is more important than what it looks like.
+  /   .medium-4.large-4.columns.supporticons
+  /     a href="#"
+  /       img src="http://visualbam.com/assets/mobile-d8c4e235190b40675356a1450f6ffe10.png"
+  /     h4 Mobile First
+  /     p Developing and designing for mobile devices should start on your phone and end on your desktop.
