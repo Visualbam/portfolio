@@ -22,17 +22,45 @@
 
 section.support {
   background: $secondary-color;
-  padding-top: 0;
-  .tabs {
-    display: flex;
-    li {
-      flex: 1;
-      display: block;
-      text-align: center;
+  padding: 0;
+  h2  {
+    margin-top: 1rem;
+  }
+  h2, p {
+    color: #5e6264;
+  }
+  img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  .tabs-content {
+    margin: 0;
+    padding: 2rem;
+  }
+  .tabs li {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    width: 33.33333%;
+    a {
+      font-size: rem-calc(11);
     }
   }
   .tab-title.active a:focus {
     outline: none;
+  }
+  .panel {
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background: $primary-color;
+      border: $primary-color;
+    }
+    img {
+      display: block;
+      margin: 0 auto 1rem;
+      width: 50%;
+    }
   }
 }
 
@@ -46,6 +74,9 @@ section.support {
     span {
       font-weight: bold;
     }
+  }
+  a {
+    color: white;
   }
   p {
     color: darken($primary-color, 30%);
