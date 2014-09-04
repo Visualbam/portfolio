@@ -6,6 +6,6 @@ unless isEditing
     span= model.dateLocation
     p
       model.jobDescription
-    / link-to 'Edit' 'company.edit' model classNames='edit button'
-    / input.button type='submit' value='Save Changes' click="saveChanges"
-    / a.delete.button href='#' click="delete" Delete
+    link-to 'Edit' 'company.edit' model classNames='edit button'
+    input.button type='submit' value='Save Changes' click="saveChanges"
+    a.delete.button href='#' click="delete" Delete
