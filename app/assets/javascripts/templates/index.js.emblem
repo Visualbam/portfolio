@@ -9,7 +9,8 @@ section.intro
           I do not consider what I do a job. 
         .actions
           = link-to "companies" class="button line round small"| Read More 
-          .button.line.round.small Download Resume
+          .button.line.round.small 
+            a href="https://drive.google.com/file/d/0B5QFoIcx46DVSHlJRzF0QkZ1ajA/edit?usp=sharing" target="_blank" Download Resume
     .small-12.medium-4.columns
       img src="assets/center2.png" alt="Logo"
 section.support

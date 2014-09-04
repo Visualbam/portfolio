@@ -20,6 +20,13 @@
   }
 }
 
+.top-bar-section ul li > a {
+  @media only screen and (max-width: 40em) {
+    color: white;
+    text-align: center;
+  }
+}
+
 section.support {
   background: $secondary-color;
   padding: 0;
