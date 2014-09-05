@@ -10,42 +10,29 @@ section.intro
         .actions
           = link-to "companies" class="button line round small"| Read More 
           .button.line.round.small 
-            a href="https://drive.google.com/file/d/0B5QFoIcx46DVSHlJRzF0QkZ1ajA/edit?usp=sharing" target="_blank" Download Resume
+            a href="https://drive.google.com/file/d/0B5QFoIcx46DVSHlJRzF0QkZ1ajA/edit?usp=sharing" target="_blank" Resume
     .small-12.medium-4.columns
       img src="assets/center2.png" alt="Logo"
 section.support
-  .row
-    ul.tabs data-tab="" role="tablist"
-      li.tab-title.active role="presentational"
-        a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1" Design
-      li.tab-title role="presentational"
-        a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" controls="panel2-2" Develop
-      li.tab-title role="presentational"
-        a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3" UI/UX
-    .tabs-content
-      section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1"
-        .row
-          .small-12.medium-4.columns
-            img src="assets/design.png"
-          .small-12.medium-8.columns
-            h2 I'm a designer
-            p When developing websites, understanding core design principles is key to expanding your
-              capabilities. My background and degree is in design but I consider it more of a skillset
-              in my developer toolbox.
-      section role="tabpanel" aria-hidden="true" class="content" id="panel2-2"
-        .row
-          .small-12.medium-4.columns
-            img src="assets/develop.png"
-          .small-12.medium-8.columns
-            h2 I'm a developer
-            p Developing has become a passion that I enjoy daily. Keeping up with the latest frameworks
-              and technology is something that I pride myself in doing. Although I enjoy Ruby on Rails
-              I like to try to langauges and methods to implement into my proccess.
-      section role="tabpanel" aria-hidden="true" class="content" id="panel2-3"
-        .row
-          .small-12.medium-4.columns
-            img src="assets/userexp.png"
-          .small-12.medium-8.columns
-            h2 Mobile first & Usability
-            p I create engaging mobile, tablet, and desktop experiences. This is how I spend my evenings.
-              Developing and designing for mobile devices should start on your phone and end on your desktop.
+  .row data-equalizer=""
+    .small-12.medium-4.columns.item data-equalizer-watch=""
+      .small-12.columns
+        img src="assets/design.png"
+      .small-12.columns
+        h5 I'm a designer
+        p Understanding core design principles is key to expanding your capabilities.
+          My background and degree is in design but I consider it a skillset in my developer toolbox.
+    .small-12.medium-4.columns.item data-equalizer-watch=""
+      .small-12.columns
+        img src="assets/develop.png"
+      .small-12.columns
+        h5 I'm a developer
+        p Developing has become a passion that I enjoy daily. Keeping up with the latest frameworks
+          and technologies is something that I enjoy doing. If I'm not learning, I'm not growing.
+    .small-12.medium-4.columns.item data-equalizer-watch=""
+      .small-12.columns
+        img src="assets/userexp.png"
+      .small-12.columns
+        h5 Mobile first & Usability
+        p I create engaging mobile, tablet, and desktop experiences. This is how I spend my evenings.
+          Developing and designing for mobile devices should start on your device.

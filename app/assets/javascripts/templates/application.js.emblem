@@ -2,7 +2,7 @@
   nav.top-bar role="navigation" data-topbar=""
     ul.title-area
       li.name
-        h1= link-to "index": img src="http://visualbam.com/assets/logo-6814ed49a10036dc5045fcded8db5acb.svg" alt="Logo"
+        h1= link-to "index": img src="assets/logo.svg" alt="Logo"
       li.toggle-topbar.menu-icon: a: span Menu
     section.top-bar-section
       ul.right
@@ -10,5 +10,18 @@
         li= link-to "companies" | Resume
         li= link-to "portfolio" | Portfolio
 .main= outlet
-footer: .row: .columns.large-12
-  p &copy; 2014 Bruce McElroy
+#footer
+  footer 
+    .row
+      div
+        / = link_to(image_tag("logo-footer.svg", :alt => "Bruce McElroy Logo", :rel => "logo"), root_path)
+        img src="assets/logo-footer.svg" alt="Logo"
+        p My goal is to provide you with a service as a front end web developer that exceeds your expectations in a timely fashion. 
+        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
+          i.icon-facebook-sign
+        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
+          i.icon-github-sign
+        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
+          i.icon-dribbble
+        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
+          i.icon-linkedin-sign
