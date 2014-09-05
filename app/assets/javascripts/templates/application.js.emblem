@@ -10,18 +10,15 @@
         li= link-to "companies" | Resume
         li= link-to "portfolio" | Portfolio
 .main= outlet
-#footer
-  footer 
-    .row
-      div
-        / = link_to(image_tag("logo-footer.svg", :alt => "Bruce McElroy Logo", :rel => "logo"), root_path)
-        img src="assets/logo-footer.svg" alt="Logo"
-        p My goal is to provide you with a service as a front end web developer that exceeds your expectations in a timely fashion. 
-        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
-          i.icon-facebook-sign
-        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
-          i.icon-github-sign
-        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
-          i.icon-dribbble
-        a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
-          i.icon-linkedin-sign
+footer: .row
+  .small-12.columns
+    img src="assets/logo-footer.svg" alt="Logo"
+    a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
+      i.fa.fa-facebook-square
+    a href="https://github.com/visualbam/" target="_blank"
+      i.fa.fa-github
+    a href="https://dribbble.com/visualbam" target="_blank"
+      i.fa.fa-dribbble
+    a href="https://www.linkedin.com/in/brucemcelroy" target="_blank"
+      i.fa.fa-linkedin-square
+    p My goal is to provide you with a service as a front end web developer that exceeds your expectations in a timely fashion. 
