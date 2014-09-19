@@ -1,6 +1,6 @@
 section.tapdat
   header
-    .row: .small-12.columns
+    .row: .small-12.small-centered.medium-6.columns
       img src="assets/logo-white.svg"
   .colors
     .blue

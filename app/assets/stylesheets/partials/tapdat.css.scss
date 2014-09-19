@@ -4,10 +4,15 @@ section.tapdat {
   header {
     background: #605461;
     margin-top: -2rem;
-    padding: 3rem 0;
+    padding: 4rem 0;
     img {
       margin: 0 auto;
       display: block;
+    }
+    h5 {
+      color: white;
+      text-align: center;
+      margin: 1rem 0 0;
     }
   }
   .colors {
@@ -43,7 +48,7 @@ section.tapdat {
       }
     }
     .img-container {
-      padding: 2rem;
+      padding: 4rem;
       img {
         margin: 0 auto;
         display: block;
@@ -51,7 +56,10 @@ section.tapdat {
     }
     @media only screen and (min-width: 40.063em) {
       .dummy {
-          padding-top: 45%; /* forces 1:1 aspect ratio */
+          padding-top: 100%; /* forces 1:1 aspect ratio */
+          @media only screen and (min-width: 64.063em) {
+            padding-top: 60%;
+          }
       }
       .img-container {
         position: absolute;
@@ -59,7 +67,7 @@ section.tapdat {
         bottom: 0;
         left: 0;
         right: 0;
-        text-align:center; /* Align center inline elements */
+        text-align: center; /* Align center inline elements */
         font: 0/0;
         &:before {
           content: ' ';
@@ -72,10 +80,12 @@ section.tapdat {
           display: inline-block;
         }
         .vertical {
-          width: 40%;
+          width: 100%;
+          max-width: 200px;
         }
         .horizontal {
-          width: 65%;
+          width: 100%;
+          max-width: 350px;
         }
       }
     }
