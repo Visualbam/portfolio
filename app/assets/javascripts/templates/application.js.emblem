@@ -2,7 +2,7 @@
   nav.top-bar role="navigation" data-topbar=""
     ul.title-area
       li.name
-        h1= link-to "index": img src="assets/logo.svg" alt="Logo"
+        h1= link-to "index": img src="../assets/logo.svg" alt="Logo"
       li.toggle-topbar.menu-icon: a: span Menu
     section.top-bar-section
       ul.right
@@ -13,7 +13,7 @@
 .main= outlet
 footer: .row
   .small-12.columns
-    img src="assets/logo-footer.svg" alt="Logo"
+    = link-to "index": img src="../assets/logo-footer.svg" alt="Logo"
     a href="https://www.facebook.com/bruce.a.mcelroy" target="_blank"
       i.fa.fa-facebook-square
     a href="https://github.com/visualbam/" target="_blank"

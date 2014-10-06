@@ -8,9 +8,9 @@
     dl
       dt: label Last Name:
       dd: view Ember.TextField value=model.lastName
-    dl
-      dt: label Social Network:
-      dd: view Ember.TextField value=model.social
+    / dl
+    /   dt: label Social Network:
+    /   dd: view Ember.TextField value=model.social
     dl
       dt: label Description:
       dd: view Ember.TextArea value=model.description

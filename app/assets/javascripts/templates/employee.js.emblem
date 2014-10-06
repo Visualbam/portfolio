@@ -3,8 +3,8 @@
     .description
       h2
         model.fullName
-      a target="_blank" href=model.social
-        model.social
+      / a target="_blank" href=model.social
+      /   model.social
       p
         model.description
       hr
