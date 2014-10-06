@@ -9,6 +9,7 @@
         li= link-to "index" | Home
         li= link-to "companies" | Resume
         li= link-to "portfolio" | Portfolio
+        li= link-to "brunner" | Brunner
 .main= outlet
 footer: .row
   .small-12.columns

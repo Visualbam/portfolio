@@ -9,6 +9,7 @@ App.Router.reopen({
 App.Router.map(function() {
   this.resource('portfolio', { path: '/portfolio'} );
   this.resource('tapdat', { path: '/tapdat'} );
+  this.resource('brunner', { path: '/brunner'} );
   this.resource('companies', { path: '/resume' }, function() {
     this.route('new');
     this.resource('company', { path: '/:id' }, function(){

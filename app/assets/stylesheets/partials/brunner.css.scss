@@ -1,0 +1,32 @@
+.brunner-main {
+  background: url('brunner/main.png') 50% 0 no-repeat fixed;
+  background-size: cover;
+  height: 550px;
+  .row {
+    padding: 4rem 0;
+  }
+  .dont-know {
+    position: relative;
+  }
+  h4 {
+    border-top: 1px solid white;
+    padding: 1rem 1rem 0 0;
+    margin-top: 2rem;
+    color: white;
+    span {
+      color: $primary-color;
+    }
+  }
+  button {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+  }
+}
+
+.main section.description {
+  padding: 0;
+  ul li {
+    padding: 0;
+  }
+}
