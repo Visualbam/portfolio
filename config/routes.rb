@@ -4,6 +4,7 @@ Portfolio::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :companies
+      resources :employees
     end
   end
   
