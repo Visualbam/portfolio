@@ -4,8 +4,8 @@
 App.EmployeesRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('employee')
+  },
+  afterModel: function(employees, transition) {
+    this.transitionTo('employee', employees.get('firstObject'));
   }
-  // afterModel: function(employees, transition) {
-  //   this.transitionTo('employee', employees.get('firstObject'));
-  // }
 });

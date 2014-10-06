@@ -1,20 +1,18 @@
-// The single quote ' leaves a trailing whitespace after the line.
-unless isEditing
-  .description
-    h1
-      model.fullName
-      link-to 'edit' 'employee.edit' model classNames='edit'
-    p
-      model.social
-    p
-      label Description:
-      br
-      view Ember.TextArea value=model.description
-    p
-      a.delete href='#' click="delete" delete
-      input type='submit' value='Save Changes' click='saveChanges'
+.employee
+  unless isEditing
+    .description
+      h2
+        model.fullName
+      a target="_blank" href=model.social
+        model.social
+      p
+        model.description
+      hr
+      button click="delete" class="small control-btn" delete
+      / input type='submit' value='Save Changes' click='saveChanges' class="button small save-btn"
+      link-to 'employee.edit' tagName="button" classNames='edit small save-btn' | edit
       if isDirty
         .unsaved unsaved changes
       if isSaving
         .saving saving...
-outlet
+  outlet

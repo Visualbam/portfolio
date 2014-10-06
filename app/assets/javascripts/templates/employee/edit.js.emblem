@@ -10,11 +10,11 @@
       dd: view Ember.TextField value=model.lastName
     dl
       dt: label Social Network:
-      dd: view Ember.TextArea value=model.social
+      dd: view Ember.TextField value=model.social
     dl
       dt: label Description:
-      dd: view Ember.TextField value=model.description
+      dd: view Ember.TextArea value=model.description
 
   .actions
-    input.button type='submit' value='Save Changes' click="saveChanges"
-    a.cancel.button href="#" click="cancel" cancel
+    a.cancel.button.small.save-btn href="#" click="cancel" cancel
+    input.button.small.save-btn type='submit' value='Save Changes' click="saveChanges"

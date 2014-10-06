@@ -7,8 +7,8 @@ namespace :db do
       Employee.create(
         first_name: Faker::Name.first_name,
         last_name: Faker::Name.last_name,
-        social: Faker::HipsterIpsum.words(10).join(' '),
-        description: Faker::PhoneNumber.short_phone_number
+        description: Faker::HipsterIpsum.words(10).join(' '),
+        social: Faker::PhoneNumber.short_phone_number
         );
     end
 

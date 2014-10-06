@@ -10,7 +10,7 @@ App.Router.map(function() {
   this.resource('portfolio', { path: '/portfolio'} );
   this.resource('tapdat', { path: '/tapdat'} );
   this.resource('brunner', { path: '/brunner'} );
-  this.resource('employees', { path: '/employees' }, function() {
+  this.resource('employees', { path: '/brunner' }, function() {
     this.route('new');
     this.resource('employee', { path: '/:id' }, function(){
       this.route('edit');

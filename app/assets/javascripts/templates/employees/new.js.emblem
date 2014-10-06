@@ -1,7 +1,5 @@
-h1 New Lead
-
-form
-  fieldset
+.employee
+  form
     dl
       dt: label First Name:
       dd: view Ember.TextField value=fields.firstName
@@ -16,7 +14,6 @@ form
 
     dl
       dt: label Description:
-      dd: view Ember.TextField value=fields.description
-
-  fieldset.actions
-    input type='submit' value='Add Employee' click="createEmployee"
+      dd: view Ember.TextArea value=fields.description
+    a.cancel.button.small.save-btn href="#" click="cancel" cancel
+    input.button.small type='submit' value='Add to friends' click="createEmployee"

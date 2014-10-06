@@ -1,8 +1,40 @@
-.row
-  .small-12.columns
-    link-to 'employees.new' | New Employee
-    ul
-      each employee in controller
-        link-to 'employee' employee tagName="li"
-          employee.fullName
-    outlet
+section.brunner-main
+  .row
+    .small-12.medium-6.columns
+      img src="assets/brunner/title-img.png"
+      h4 My name is <span>Bruce</span> and it’s been a pleasure meeting all of you. Here's a little about me.
+  .row.dont-know
+    a.translate I enjoy the outdoors almost as much as the office
+section.description
+  ul.small-block-grid-4.medium-block-grid-4.large-block-grid-8
+    li: img src="assets/brunner/instagram/1.jpg"
+    li: img src="assets/brunner/instagram/2.jpg"
+    li: img src="assets/brunner/instagram/3.jpg"
+    li: img src="assets/brunner/instagram/4.jpg"
+    li: img src="assets/brunner/instagram/5.jpg"
+    li: img src="assets/brunner/instagram/6.jpg"
+    li: img src="assets/brunner/instagram/7.jpg"
+    li: img src="assets/brunner/instagram/8.jpg"
+    li: img src="assets/brunner/instagram/9.jpg"
+    li: img src="assets/brunner/instagram/22.jpg"
+    li: img src="assets/brunner/instagram/11.jpg"
+    li: img src="assets/brunner/instagram/12.jpg"
+    li: img src="assets/brunner/instagram/28.jpg"
+    li: img src="assets/brunner/instagram/14.jpg"
+    li: img src="assets/brunner/instagram/15.jpg"
+    li: img src="assets/brunner/instagram/16.jpg"
+section.your-turn
+  / .row
+  /   .small-12.columns
+  /     h1 Hello there
+  /     p Now that you know pretty much everything about me, tell me about who's really important.. you!
+  .row
+    .small-12.medium-5.columns
+      span.name-title People who want to be my friend
+      ul.names
+        each employee in controller
+          link-to 'employee' employee tagName="li"
+            employee.fullName
+      link-to 'employees.new' tagName="button" class="expand" | Tell me about yourself
+    .small-12.medium-7.columns
+      outlet
