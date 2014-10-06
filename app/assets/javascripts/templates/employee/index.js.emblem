@@ -1,0 +1,4 @@
+employee.all
+each employee in controller
+  h3 employee.firstName
+  h3= model.firstName

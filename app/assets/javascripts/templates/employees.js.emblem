@@ -1,0 +1,5 @@
+employee.all
+each employee in controller
+  ul
+    li= employee.firstName
+    li= employee.lastName

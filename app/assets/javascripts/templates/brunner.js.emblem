@@ -4,7 +4,7 @@ section.brunner-main
       img src="assets/brunner/title-img.png"
       h4 My name is <span>Bruce</span> and it’s been a pleasure meeting all of you. Here's a little about me.
   .row.dont-know
-    button I enjoy the outdoors almost as much as the office
+    a.translate I enjoy the outdoors almost as much as the office
 section.description
   ul.small-block-grid-4.medium-block-grid-4.large-block-grid-8
     li: img src="assets/brunner/instagram/1.jpg"
