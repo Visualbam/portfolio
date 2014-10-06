@@ -11,7 +11,10 @@ App.Router.map(function() {
   this.resource('tapdat', { path: '/tapdat'} );
   this.resource('brunner', { path: '/brunner'} );
   this.resource('employees', { path: '/employees' }, function() {
-    this.resource('employee', { path: '/:id' });
+    this.route('new');
+    this.resource('employee', { path: '/:id' }, function(){
+      this.route('edit');
+    });
   });
   this.resource('companies', { path: '/resume' }, function() {
     this.route('new');

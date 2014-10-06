@@ -1,0 +1,20 @@
+.description
+  form
+    dl
+      dt: label First Name:
+      dd: view Ember.TextField value=model.firstName
+      // Ember gives you the Ember.TextField view which renders a text input. \
+      // Just assign value to the property you want to bind to.
+    dl
+      dt: label Last Name:
+      dd: view Ember.TextField value=model.lastName
+    dl
+      dt: label Social Network:
+      dd: view Ember.TextArea value=model.social
+    dl
+      dt: label Description:
+      dd: view Ember.TextField value=model.description
+
+  .actions
+    input.button type='submit' value='Save Changes' click="saveChanges"
+    a.cancel.button href="#" click="cancel" cancel

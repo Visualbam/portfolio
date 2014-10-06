@@ -1,5 +1,8 @@
-ul
-  each employee in controller
-    link-to 'employee' employee tagName="li"
-      employee.fullName
-outlet
+.row
+  .small-12.columns
+    link-to 'employees.new' | New Employee
+    ul
+      each employee in controller
+        link-to 'employee' employee tagName="li"
+          employee.fullName
+    outlet
