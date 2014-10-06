@@ -1,5 +1,5 @@
-employee.all
-each employee in controller
-  ul
-    li= employee.firstName
-    li= employee.lastName
+ul
+  each employee in controller
+    link-to 'employee' employee tagName="li"
+      employee.fullName
+outlet
